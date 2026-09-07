@@ -8,6 +8,11 @@ html,
 body {
   margin: 0;
   padding: 0;
+  scroll-padding-top: 4.5rem;
+}
+
+[id] {
+  scroll-margin-top: 4.5rem;
 }
 
 body {
