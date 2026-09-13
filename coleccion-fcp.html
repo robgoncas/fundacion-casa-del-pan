@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colección FCP | Fundación Casa del Pan</title>
+  <meta name="description" content="Colección de obras de la Fundación Casa del Pan, organizada por series.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/galleries.css">
+</head>
+<body class="gallery-body">
+  <header class="gallery-header bg-surface/95 backdrop-blur-md">
+    <div class="gallery-nav h-16 max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between gap-space-md">
+      <a class="gallery-brand flex items-center gap-space-sm group focus:outline-none focus:ring-2 focus:ring-secondary rounded-lg" href="index.html">
+        <img alt="Fundación Casa del Pan Logo" class="h-8 w-auto object-contain" src="assets/images/logo.png" width="32" height="32" />
+        <div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-tight group-hover:text-primary transition-colors">Casa del Pan</span><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Valparaíso · Chile</span></div>
+      </a>
+      <nav aria-label="Navegación principal" class="gallery-links hidden xl:flex items-center gap-space-lg">
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" href="index.html">Inicio</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" href="index.html#quienes-somos">Quiénes<br>Somos</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" href="index.html#directorio">Directorio</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" href="index.html#programas">Programas</a>
+        <a aria-current="page" class="font-label-md text-label-md text-primary font-bold transition-colors py-2" href="coleccion-fcp.html">Galería</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" href="obras-subastas.html">Eventos</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" href="index.html#transparencia">Transparencia</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" href="index.html#contacto">Contacto</a>
+      </nav>
+      <div class="gallery-actions flex items-center gap-space-sm"><a class="gallery-member-link hidden sm:inline-flex items-center justify-center min-h-[48px] px-space-md py-space-xs rounded-xl bg-primary-container text-on-primary font-label-md text-label-md shadow-sm hover:brightness-105 active:scale-98 transition-all" href="index.html#hazte-socio">Hazte Socio</a><a class="gallery-link-cta inline-flex items-center justify-center min-h-[48px] px-space-lg py-space-xs rounded-xl bg-tertiary text-on-tertiary font-label-md text-label-md shadow-md hover:brightness-110 active:scale-98 transition-all gap-space-xs" href="index.html#donar"><span aria-hidden="true" class="material-symbols-outlined text-[20px]">favorite</span><span>Donar</span></a><span class="gallery-profile w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-1" aria-hidden="true"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></span></div>
+    </div>
+  </header>
+  <aside aria-label="Evento Solidario Destacado" class="auction-banner w-full bg-inverse-surface px-gutter-mobile lg:px-gutter-desktop py-space-sm shadow-sm">
+    <div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-space-sm w-full"><div class="auction-banner-inner flex items-center gap-space-sm"><img class="h-14 w-14 rounded-xl object-cover shadow-sm" src="assets/images/logo-evento-subasta.jpeg" alt="Logo de la subasta Arte y Solidaridad" width="56" height="56" /><span aria-hidden="true" class="auction-banner-icon inline-flex p-space-xs rounded-full bg-tertiary text-on-tertiary animate-pulse"><span class="material-symbols-outlined text-[20px]">palette</span></span><div class="flex flex-col"><span class="auction-banner-kicker font-label-sm text-label-sm uppercase tracking-wider">Gran Hito 2026</span><p class="font-headline-sm text-headline-sm">I Subasta Benéfica de Obras de Arte: <span>Arte y Solidaridad</span></p><p class="font-body-sm text-body-sm">14 de Noviembre de 2026 · 11:00 hrs · Club Alemán de Valparaíso (Salvador Donoso 1337). Meta: Arriendo Anual Avenida Francia ($4.800.000 / 48 obras).</p></div></div></div>
+  </aside>
+  <main class="gallery-main" data-gallery-root="collection">
+    <section class="gallery-hero">
+      <span class="gallery-kicker">Archivo vivo de la Fundación Casa del Pan</span>
+      <h1>Una colección, seis viajes.</h1>
+      <p>Explora la colección de la Fundación Casa del Pan organizada por series. El nombre de cada carpeta identifica la serie y el nombre de cada imagen se presenta como título de la obra.</p>
+      <span class="gallery-stat">54 obras · 6 series</span>
+    </section>
+    <div data-series-container></div>
+  </main>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
+    <button class="lightbox-close" type="button" aria-label="Cerrar vista ampliada" data-lightbox-close>×</button>
+    <button class="lightbox-arrow lightbox-prev" type="button" aria-label="Obra anterior" data-lightbox-prev>‹</button>
+    <div class="lightbox-content"><div class="lightbox-media"><img data-lightbox-image alt=""></div><div class="lightbox-info"><span class="gallery-kicker">Ficha de la obra</span><h2 id="lightbox-title" data-lightbox-title></h2><p data-lightbox-description></p><p><strong>Tamaño original</strong><br><span data-lightbox-size></span></p></div></div>
+    <button class="lightbox-arrow lightbox-next" type="button" aria-label="Obra siguiente" data-lightbox-next>›</button>
+  </div>
+  <script src="assets/js/galleries.js" defer></script>
+</body>
+</html>

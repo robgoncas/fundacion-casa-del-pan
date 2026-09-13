@@ -9,7 +9,7 @@
     title: 'I Subasta Benéfica de Obras de Arte - Arte y Solidaridad',
     start: '20261114T110000',
     end: '20261114T140000',
-    location: 'Club Alemán de Valparaíso, Salvador Donoso 1337, Valparaíso, Chile',
+    location: 'Club Alemán de Valparaíso, Calle Salvador Donoso 1337, Salón Bellavista, segundo piso, acceso universal, Valparaíso, Chile',
     description: 'Subasta benéfica de la Fundación Casa del Pan para financiar el arriendo de su sede comunitaria.'
   };
 
@@ -72,7 +72,7 @@
     if (inputOtro) inputOtro.value = '';
     if (!texto) return;
     const mensajes = {
-      5000: 'Con <strong>$5.000 mensuales</strong> aseguras témperas y pigmentos orgánicos para 2 personas en situación de discapacidad.',
+      5000: 'Con <strong>$5.000 mensuales</strong> podemos disponer de recursos para materiales, movilización, ayudas solidarias y algún evento.',
       10000: 'Con <strong>$10.000 mensuales</strong> cubres materiales para el taller de Papel Artesanal y 1 colación comunitaria de cierre ritual.',
       20000: 'Con <strong>$20.000 mensuales</strong> financias la atención de arteterapia especializada semanal y textos en Braille.'
     };
