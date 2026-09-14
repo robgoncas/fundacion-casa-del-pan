@@ -95,22 +95,34 @@
         </a>
         <nav aria-label="Navegación principal" class="hidden xl:flex items-center gap-space-lg"
           data-active-classes="text-primary font-bold"><a aria-current="page"
-            class="transition-colors py-2 text-primary font-bold" data-path="inicio" href="#inicio">Inicio</a><a
-            class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2"
-            data-path="quienes-somos" href="#quienes-somos">Quiénes Somos</a><a
-            class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2"
-            data-path="directorio" href="#directorio">Directorio</a><a
+            class="transition-colors py-2 text-primary font-bold" data-path="inicio" href="#inicio">Inicio</a>
+          <details class="group relative">
+            <summary class="list-none cursor-pointer font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2 flex items-center gap-1">
+              Nosotros
+              <span class="material-symbols-outlined text-[18px]">expand_more</span>
+            </summary>
+            <div class="absolute left-0 top-full mt-2 w-52 rounded-xl bg-surface-container-lowest shadow-lg border border-surface-container-high p-2 z-20 flex flex-col gap-1">
+              <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg px-2 py-1.5"
+                data-path="quienes-somos" href="#quienes-somos">Quiénes Somos</a>
+              <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg px-2 py-1.5"
+                data-path="directorio" href="#directorio">Directorio</a>
+            </div>
+          </details><a
             class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2"
             data-path="programas" href="#programas">Programas</a><a
             class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2"
             data-path="galeria" href="coleccion-fcp.html">Galería</a><a
             class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2"
-            data-path="eventos" href="obras-subastas.html">Eventos</a><a
+            data-path="eventos" href="eventos.html">Eventos</a><a
             class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2"
             data-path="transparencia" href="#transparencia">Transparencia</a><a
             class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2"
             data-path="contacto" href="#contacto">Contacto</a></nav>
-        <div class="flex items-center gap-space-sm"><a
+        <div class="flex items-center gap-space-sm">
+          <button type="button" class="mobile-menu-toggle xl:hidden" aria-label="Abrir menú principal" aria-controls="mobile-menu" aria-expanded="false" data-mobile-menu-toggle>
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          <a
             class="hidden sm:inline-flex items-center justify-center min-h-[48px] px-space-md py-space-xs rounded-xl bg-primary-container text-on-primary font-label-md text-label-md shadow-sm hover:brightness-105 active:scale-98 transition-all"
             data-path="hazte-socio" href="#hazte-socio">Hazte Socio</a><a
             class="inline-flex items-center justify-center min-h-[48px] px-space-lg py-space-xs rounded-xl bg-tertiary text-on-tertiary font-label-md text-label-md shadow-md hover:brightness-110 active:scale-98 transition-all gap-space-xs"
@@ -121,6 +133,36 @@
         </div>
       </div>
     </header>
+    <div class="mobile-nav-backdrop" id="mobile-menu-backdrop" hidden></div>
+    <aside class="mobile-nav-drawer" id="mobile-menu" aria-label="Menú principal móvil" aria-hidden="true">
+      <div class="mobile-nav-header">
+        <a href="#inicio" class="mobile-nav-brand" aria-label="Inicio de la Fundación Casa del Pan">
+          <img src="assets/images/logo.png" alt="Logo de la Fundación Casa del Pan" width="40" height="40" />
+          <span>Casa del Pan</span>
+        </a>
+        <button type="button" class="mobile-nav-close" aria-label="Cerrar menú" data-mobile-menu-close>
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="mobile-nav-links" aria-label="Menú móvil">
+        <a href="#inicio">Inicio</a>
+        <a href="#subasta-info">Subasta</a>
+        <a href="#programas">Talleres</a>
+        <details class="mobile-nav-group">
+          <summary>Nosotros</summary>
+          <div class="mobile-nav-submenu">
+            <a href="#quienes-somos">Quiénes somos</a>
+            <a href="#directorio">Directorio</a>
+            <a href="#pedagogia-ritual">Pedagogía Ritual</a>
+          </div>
+        </details>
+        <a href="coleccion-fcp.html">Galería</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="#transparencia">Transparencia</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#hazte-socio" class="mobile-nav-cta">Hazte Socio</a>
+      </nav>
+    </aside>
   </div>
   <main class="w-full pt-[4rem] bg-surface relative min-h-screen" id="contenido-principal">
     <div class="flex flex-col w-full">
@@ -160,9 +202,10 @@
             <a href="#subasta-info">Subasta</a>
             <a href="#programas">Talleres</a>
             <details class="site-nav__more">
-              <summary>Más opciones ▾</summary>
+              <summary>Nosotros ▾</summary>
               <div class="site-nav__menu">
                 <a href="#quienes-somos">Quiénes somos</a>
+                <a href="#directorio">Directorio</a>
                 <a href="#pedagogia-ritual">Pedagogía Ritual</a>
                 <a href="#transparencia">Transparencia</a>
                 <a href="#contacto">Contacto</a>
@@ -458,7 +501,7 @@
                   <img class="w-full h-full object-cover"
                     data-alt="Retrato artístico en blanco y negro cálido de Elena Montaner Sepúlveda, pedagoga, investigadora y poeta chilena, con mirada dulce, rodeada de libros de pedagogía y mandalas trazados a mano con tinta suave"
                     height="112"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVI7LGFawS1FX7c8ahzStVWSTsqM3MkX15RsY9pttzqvDucIJXhgaVwBtXFAh0Mk8cdzZkpUde4tQJnUhp3AkLfHrCpRTw68TP2cIUcu7HD_jxvgL8eNnosFLxyyVO5V_-PR5ffFjWVMZdq9BYSxK_uXa1yifpLXyRMSW-QS6qCLJuReolyppxe3CHfIdyX95L9gKjLO8D4JvK57AVGBPEitNGGLVUERGdNPq8-a4Kj4WZWhAx4wl1"
+                    src="assets/images/elena-sepulveda.jpg"
                     width="112" />
                 </div>
                 <div class="flex flex-col gap-space-xxs">
@@ -481,7 +524,7 @@
                   <img class="w-full h-full object-cover"
                     data-alt="Retrato del maestro Iván Tapia Contardo, educador de personas ciegas formado en la Universidad de Chile, pintor y pastor comunitario, con pinceles y hojas de sistema Braille en su mesa de trabajo en Valparaíso"
                     height="112"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLpEFwS0wyjtrQ-Ug8og-g73fvjW8InbQ5IAVZVeYlpkgB5-COMl4qT_B30zgL4DIXoIUMY_YAcygKpfH0Ee8omlGP9oPJ-F4p6tzVHLSo2mmjJGnI-5ROG2GBH2Ehjqa83aUaX90txfiJpVKUnNvGwIBW4W0Fk3Ko1-ReXLsHjyeuionCD-g33KMtWodqHlcFUUcPooq8E16pwaNrB6PG4H0EXsMd9OECvYCQb2C3fH50X7oKEVUX"
+                    src="assets/images/ivan-contardo.jpg"
                     width="112" />
                 </div>
                 <div class="flex flex-col gap-space-xxs">
@@ -579,8 +622,7 @@
                 Talleres Comunitarios de Arteterapia e Inclusión
               </h2>
               <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-space-xxs">
-                Espacios semanales 100% gratuitos para jóvenes y adultos con discapacidad cognitiva, visual, motora y
-                sus cuidadoras.
+                Espacios semanales 100% gratuitos para jóvenes y adultos con necesidades especiales.
               </p>
             </div>
             <!-- Filtros de categoría -->
@@ -610,9 +652,8 @@
                 <span
                   class="inline-block px-2 py-0.5 rounded text-label-sm font-bold bg-primary-fixed text-on-primary-fixed">Oficio
                   Sustentable</span>
-                <h3 class="font-headline-sm text-headline-sm text-on-surface">Papel Artesanal Hecho a Mano</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant">Reciclaje de celulosa urbana y fibras
-                  vegetales de la quebrada para elaborar pliegos artísticos y encuadernaciones.</p>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Taller de Papel Reciclado</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Elaborado con diferentes tipos de papeles, verduras y flores secas. Útiles para diseño de cuadros, tarjetas, álbumes fotográficos, folletos, cuadernos y otras presentaciones.</p>
               </div>
               <div class="pt-space-md">
                 <span class="font-label-sm text-label-sm text-secondary font-bold">Martes · 15:30 hrs</span>
@@ -626,8 +667,7 @@
                 <span
                   class="inline-block px-2 py-0.5 rounded text-label-sm font-bold bg-secondary-container text-on-secondary-container">Ecológico</span>
                 <h3 class="font-headline-sm text-headline-sm text-on-surface">Arte Reciclado &amp; Escultura</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant">Transformación de maderas, latas y retazos
-                  porteños en ensambles creativos con valor estético y memoria barrial.</p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Representación de lugares, personajes, entidades y costumbres del barrio, mediante la utilización de elementos reciclados, telas teñidas a mano y otros desechos naturales.</p>
               </div>
               <div class="pt-space-md">
                 <span class="font-label-sm text-label-sm text-secondary font-bold">Miércoles · 16:00 hrs</span>
@@ -641,9 +681,8 @@
                 <span
                   class="inline-block px-2 py-0.5 rounded text-label-sm font-bold bg-tertiary-fixed text-on-tertiary-fixed">Expresión
                   Plástica</span>
-                <h3 class="font-headline-sm text-headline-sm text-on-surface">Pintura: Forma y Color</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant">Uso de acrílico y tintas naturales para
-                  canalizar el universo sensible de personas con capacidades cognitivas diversas.</p>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Pinceladas de Vida</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Taller de pintura (óleo, acrílico y técnicas mixtas sobre tela, madera y cartón) centrado en el bienestar psicológico y la salud emocional. Proporciona un entorno protegido para la libre expresión, donde cada participante puede canalizar sus sentimientos y vivencias a través de la creación plástica.</p>
               </div>
               <div class="pt-space-md">
                 <span class="font-label-sm text-label-sm text-secondary font-bold">Jueves · 11:00 hrs</span>
@@ -656,27 +695,39 @@
                 <span class="material-symbols-outlined text-primary text-[32px]">music_note</span>
                 <span
                   class="inline-block px-2 py-0.5 rounded text-label-sm font-bold bg-primary-fixed text-on-primary-fixed">Sonoterapia</span>
-                <h3 class="font-headline-sm text-headline-sm text-on-surface">Música &amp; Ritmo Porteño</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant">Estimulación rítmica con tambores, campanas
-                  y guitarras. Ensamble inclusivo abierto a jóvenes y familias.</p>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Música &amp; Bailes del Norte y del Sur</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Taller de música y danzas folclóricas cuyo propósito es el desarrollo psicomotriz, la apreciación musical, la ejecución de instrumentos y el desarrollo armónico entre la ejecución instrumental, el ritmo y la expresión corporal.</p>
               </div>
               <div class="pt-space-md">
                 <span class="font-label-sm text-label-sm text-secondary font-bold">Viernes · 16:30 hrs</span>
               </div>
             </article>
-            <!-- 5. Mandalas Terapéuticos -->
+            <!-- 5. Mandalas -->
             <article
               class="taller-card arteterapia p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
               <div class="space-y-space-xs">
                 <span class="material-symbols-outlined text-secondary text-[32px]">blur_circular</span>
                 <span
                   class="inline-block px-2 py-0.5 rounded text-label-sm font-bold bg-secondary-container text-on-secondary-container">Concentración</span>
-                <h3 class="font-headline-sm text-headline-sm text-on-surface">Mandalas de Pacificación</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant">Diseño geométrico ritualizado que promueve
-                  relajación profunda y reduce niveles de estrés y angustia.</p>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Taller Mandalas</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Taller en tres fases: 1) Danza sagrada; 2) Entrega de conocimiento acerca de lo que son los mandalas; 3) Creación de un mandala, utilizando distintas técnicas plásticas y materiales; y 4) Cierre con una meditación y/o viaje interior y autoevaluación.</p>
               </div>
               <div class="pt-space-md">
                 <span class="font-label-sm text-label-sm text-secondary font-bold">Sábado · 10:30 hrs</span>
+              </div>
+            </article>
+            <!-- 5.1. Tejer un Mandala -->
+            <article
+              class="taller-card arteterapia p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+              <div class="space-y-space-xs">
+                <span class="material-symbols-outlined text-secondary text-[32px]">checkroom</span>
+                <span
+                  class="inline-block px-2 py-0.5 rounded text-label-sm font-bold bg-secondary-container text-on-secondary-container">Relajación</span>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Taller Jugando a Tejer un Mandala</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Taller de tejido a crochet, cuyo propósito es reducir la ansiedad y el estrés, mejorar el humor, desarrollar la coordinación del pensamiento lógico y la memoria, adquirir destrezas y técnicas básicas en el aprendizaje de los puntos base del tejido con ganchillo y lana.</p>
+              </div>
+              <div class="pt-space-md">
+                <span class="font-label-sm text-label-sm text-secondary font-bold">Sábado · 12:00 hrs</span>
               </div>
             </article>
             <!-- 6. Poesía Madero -->
@@ -688,8 +739,7 @@
                   class="inline-block px-2 py-0.5 rounded text-label-sm font-bold bg-tertiary-fixed text-on-tertiary-fixed">Palabra
                   Viva</span>
                 <h3 class="font-headline-sm text-headline-sm text-on-surface">Taller Literario «Poesía Madero»</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant">Creación poética, lectura dramatizada y
-                  edición de plaquettes populares impresas en nuestro propio papel.</p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Leer obras poéticas universales, desarrollar la comprensión lectora, conocer distintas figuras literarias (metáfora, comparación, anáfora, prosopopeya, etc.) y escribir textos poéticos a partir de imágenes, sonidos, objetos y experiencias vividas; lecturas dramatizadas y edición de plaquettes impresas.</p>
               </div>
               <div class="pt-space-md">
                 <span class="font-label-sm text-label-sm text-secondary font-bold">Lunes · 17:00 hrs</span>
@@ -702,9 +752,8 @@
                 <span class="material-symbols-outlined text-primary text-[32px]">touch_app</span>
                 <span
                   class="inline-block px-2 py-0.5 rounded text-label-sm font-bold bg-primary-fixed text-on-primary-fixed">Autonomía</span>
-                <h3 class="font-headline-sm text-headline-sm text-on-surface">Braille, Eneagrama &amp; Oficios</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant">Alfabetización táctil guiada por el
-                  educador Iván Tapia, seminarios de Eneagrama y formación en masofilaxia inclusiva.</p>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Taller Autoconocimiento por medio del Eneagrama</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Taller basado en la teoría de los nueve eneatipos o tipos de personalidad, planteados por el maestro George Gurdjieff. Identificar a través de diversos ejercicios de autoobservación, reflexión y diálogo, el propio eneatipo y sus alas, para enfrentar y superar aspectos negativos.</p>
               </div>
               <div class="pt-space-md">
                 <span class="font-label-sm text-label-sm text-secondary font-bold">Miércoles · 11:30 hrs</span>
@@ -719,8 +768,7 @@
                   class="inline-block px-2 py-0.5 rounded text-label-sm font-bold bg-secondary-container text-on-secondary-container">Acceso
                   Público</span>
                 <h3 class="font-headline-sm text-headline-sm text-on-surface">Biblioteca Elena Montaner</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant">Préstamo de libros de arte, poesía chilena,
-                  textos en braille y computadores adaptados. Abierta a todo Valparaíso.</p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Préstamo de libros de educación, psicología, desarrollo personal, arte, poesía y literatura general y textos en braille y otros materiales adaptados. Abierta a todo público.</p>
               </div>
               <div class="pt-space-md flex items-center justify-between">
                 <span class="font-label-sm text-label-sm text-secondary font-bold">Lun a Vie · 10:00 - 18:00</span>
@@ -757,7 +805,7 @@
               <div class="flex flex-col">
                 <h3 class="font-headline-sm text-headline-sm text-on-surface">Iván Tapia Contardo</h3>
                 <span class="font-label-sm text-label-sm text-primary font-bold">Presidente</span>
-                <span class="font-body-sm text-body-sm text-on-surface-variant">Educador U. de Chile &amp; Pastor</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Especialista en Educación de Ciegos (U.Ch.) &amp; Pastor</span>
               </div>
             </div>
             <!-- María Pía Zenteno -->
@@ -768,51 +816,40 @@
               <div class="flex flex-col">
                 <h3 class="font-headline-sm text-headline-sm text-on-surface">María Pía Zenteno Fernández</h3>
                 <span class="font-label-sm text-label-sm text-secondary font-bold">Vicepresidenta</span>
-                <span class="font-body-sm text-body-sm text-on-surface-variant">Gestión Comunitaria y Redes</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Educadora Diferencial DM / TAL (IHK / UPLACED)</span>
               </div>
             </div>
-            <!-- Elba Ortega -->
+            <!-- Eugenia Villavicencio -->
             <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-md">
               <div
                 class="w-16 h-16 rounded-full bg-tertiary/10 flex items-center justify-center shrink-0 text-tertiary font-headline-sm font-bold">
-                EO</div>
+                EV</div>
               <div class="flex flex-col">
-                <h3 class="font-headline-sm text-headline-sm text-on-surface">Elba Ortega</h3>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Eugenia Villavicencio Ponce</h3>
                 <span class="font-label-sm text-label-sm text-tertiary font-bold">Secretaria</span>
-                <span class="font-body-sm text-body-sm text-on-surface-variant">Actas y Memoria Jurídica</span>
-              </div>
-            </div>
-            <!-- Pamela Vega -->
-            <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-md">
-              <div
-                class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary font-headline-sm font-bold">
-                PV</div>
-              <div class="flex flex-col">
-                <h3 class="font-headline-sm text-headline-sm text-on-surface">Pamela Vega</h3>
-                <span class="font-label-sm text-label-sm text-primary font-bold">Prosecretaria</span>
-                <span class="font-body-sm text-body-sm text-on-surface-variant">Coordinación de Talleres</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Secretaria Ejecutiva</span>
               </div>
             </div>
             <!-- Luisa Reyes -->
             <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-md">
               <div
-                class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 text-secondary font-headline-sm font-bold">
+                class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary font-headline-sm font-bold">
                 LR</div>
               <div class="flex flex-col">
                 <h3 class="font-headline-sm text-headline-sm text-on-surface">Luisa Reyes Riquelme</h3>
-                <span class="font-label-sm text-label-sm text-secondary font-bold">Tesorera</span>
-                <span class="font-body-sm text-body-sm text-on-surface-variant">Finanzas y Rendiciones Claras</span>
+                <span class="font-label-sm text-label-sm text-primary font-bold">Tesorera</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Psicóloga Clínica</span>
               </div>
             </div>
-            <!-- Maritza Martin -->
+            <!-- Cristian Cubillos -->
             <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-md">
               <div
-                class="w-16 h-16 rounded-full bg-tertiary/10 flex items-center justify-center shrink-0 text-tertiary font-headline-sm font-bold">
-                MM</div>
+                class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 text-secondary font-headline-sm font-bold">
+                CC</div>
               <div class="flex flex-col">
-                <h3 class="font-headline-sm text-headline-sm text-on-surface">Maritza Martin Astudillo</h3>
-                <span class="font-label-sm text-label-sm text-tertiary font-bold">Relaciones Públicas</span>
-                <span class="font-body-sm text-body-sm text-on-surface-variant">Vínculo con el Barrio y Medios</span>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Cristian Cubillos Ulloa</h3>
+                <span class="font-label-sm text-label-sm text-secondary font-bold">Director</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Dirección Institucional</span>
               </div>
             </div>
           </div>
@@ -874,6 +911,11 @@
                   class="p-space-xs rounded-lg bg-surface-container flex items-center gap-space-xxs text-body-sm text-on-surface">
                   <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
                   <span>Club Alemán de Valparaíso</span>
+                </div>
+                <div
+                  class="p-space-xs rounded-lg bg-surface-container flex items-center gap-space-xxs text-body-sm text-on-surface">
+                  <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+                  <span>CESFAM Las Palmas</span>
                 </div>
               </div>
             </div>
@@ -1211,8 +1253,21 @@
         data-path="donar" href="#donar" title="Ver datos de transferencia Banco Estado"><span
           class="material-symbols-outlined text-[20px]">account_balance</span><span class="hidden md:inline">Aporte
           Banco Estado</span></a><button aria-label="Opciones de accesibilidad universal"
+        aria-controls="accessibility-panel" aria-expanded="false" data-accessibility-toggle
         class="w-12 h-12 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center shadow-lg hover:bg-surface-variant active:scale-95 transition-all"
         type="button"><span class="material-symbols-outlined text-[24px]">accessibility_new</span></button></aside>
+    <section class="accessibility-panel" id="accessibility-panel" aria-labelledby="accessibility-title" hidden>
+      <div class="accessibility-panel__header"><div><span class="material-symbols-outlined" aria-hidden="true">accessibility_new</span><h2 id="accessibility-title">Accesibilidad</h2></div><button type="button" class="accessibility-panel__close" aria-label="Cerrar opciones de accesibilidad" data-accessibility-close><span class="material-symbols-outlined" aria-hidden="true">close</span></button></div>
+      <p class="accessibility-panel__intro">Ajusta la lectura visual de la página. Los cambios se guardan en este dispositivo.</p>
+      <div class="accessibility-options">
+        <label><input type="checkbox" data-accessibility-option="contrast"><span><strong>Alto contraste</strong><small>Mejora la diferencia entre texto y fondo.</small></span></label>
+        <label><input type="checkbox" data-accessibility-option="large-text"><span><strong>Texto ampliado</strong><small>Aumenta el tamaño del contenido.</small></span></label>
+        <label><input type="checkbox" data-accessibility-option="underline-links"><span><strong>Resaltar enlaces</strong><small>Subraya los enlaces para identificarlos.</small></span></label>
+        <label><input type="checkbox" data-accessibility-option="reduced-motion"><span><strong>Reducir movimiento</strong><small>Desactiva transiciones y animaciones.</small></span></label>
+      </div>
+      <button type="button" class="accessibility-reset" data-accessibility-reset>Restablecer opciones</button>
+      <p class="accessibility-status" role="status" aria-live="polite" data-accessibility-status></p>
+    </section>
   </main>
   <footer
     class="w-full bg-surface-container-low text-on-surface pt-space-3xl pb-space-2xl border-t border-surface-container-high">
@@ -1274,7 +1329,7 @@
           <div class="pt-space-xs">
             <p class="font-label-sm text-label-sm text-on-surface-variant mb-space-xs">Comunidad en Red</p><a
               class="inline-flex items-center gap-space-xxs px-space-sm py-space-xs rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-colors font-label-sm text-label-sm"
-              href="https://facebook.com" rel="noopener noreferrer" target="_blank"><span
+              href="https://www.facebook.com/profile.php?id=100087153973619&amp;sk=about" rel="noopener noreferrer" target="_blank"><span
                 class="material-symbols-outlined text-[18px]">public</span><span>Facebook Oficial Verificado</span></a>
           </div>
         </div>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eventos | Fundación Casa del Pan</title>
+  <meta name="description" content="Eventos, encuentros y actividades solidarias de la Fundación Casa del Pan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/galleries.css">
+</head>
+<body class="gallery-body">
+  <header class="gallery-header">
+    <div class="gallery-nav">
+      <a class="gallery-brand" href="index.html" aria-label="Fundación Casa del Pan, volver al inicio">
+        <img alt="Fundación Casa del Pan Logo" src="assets/images/logo.png" width="32" height="32">
+        <div><span>Casa del Pan</span><span>Valparaíso · Chile</span></div>
+      </a>
+      <nav aria-label="Navegación principal" class="gallery-links">
+        <a href="index.html">Inicio</a>
+        <details>
+          <summary>Nosotros <span class="material-symbols-outlined">expand_more</span></summary>
+          <div>
+            <a href="index.html#quienes-somos">Quiénes Somos</a>
+            <a href="index.html#directorio">Directorio</a>
+          </div>
+        </details>
+        <a href="index.html#programas">Programas</a>
+        <a href="coleccion-fcp.html">Galería</a>
+        <a aria-current="page" href="eventos.html">Eventos</a>
+        <a href="index.html#transparencia">Transparencia</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+      <div class="gallery-actions">
+        <button type="button" class="mobile-menu-toggle" aria-label="Abrir menú principal" aria-controls="gallery-mobile-menu" aria-expanded="false" data-mobile-menu-toggle>
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+        <a class="gallery-member-link" href="index.html#hazte-socio">Hazte Socio</a>
+        <a class="gallery-link-cta" href="index.html#donar"><span class="material-symbols-outlined" aria-hidden="true">favorite</span><span>Donar</span></a>
+        <span class="gallery-profile" aria-hidden="true"><span class="material-symbols-outlined">person</span></span>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-nav-backdrop" id="gallery-mobile-menu-backdrop" hidden></div>
+  <aside class="mobile-nav-drawer" id="gallery-mobile-menu" aria-label="Menú principal móvil" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="mobile-nav-brand" aria-label="Inicio de la Fundación Casa del Pan">
+        <img src="assets/images/logo.png" alt="Logo de la Fundación Casa del Pan" width="40" height="40">
+        <span>Casa del Pan</span>
+      </a>
+      <button type="button" class="mobile-nav-close" aria-label="Cerrar menú" data-mobile-menu-close><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <nav class="mobile-nav-links" aria-label="Menú móvil">
+      <a href="index.html">Inicio</a>
+      <details class="mobile-nav-group">
+        <summary>Nosotros</summary>
+        <div class="mobile-nav-submenu">
+          <a href="index.html#quienes-somos">Quiénes somos</a>
+          <a href="index.html#directorio">Directorio</a>
+        </div>
+      </details>
+      <a href="index.html#programas">Programas</a>
+      <a href="coleccion-fcp.html">Galería</a>
+      <a href="eventos.html" aria-current="page">Eventos</a>
+      <a href="index.html#transparencia">Transparencia</a>
+      <a href="index.html#contacto">Contacto</a>
+      <a href="index.html#hazte-socio" class="mobile-nav-cta">Hazte Socio</a>
+    </nav>
+  </aside>
+  <main class="gallery-main events-main">
+    <section class="gallery-hero">
+      <span class="gallery-kicker">Agenda de la Fundación · 2026</span>
+      <h1>Eventos que reúnen, crean y sostienen.</h1>
+      <p>Conoce nuestras próximas actividades y entra al detalle de cada encuentro. Aquí encontrarás la información práctica y, cuando corresponda, la galería de obras participantes.</p>
+      <span class="gallery-stat" id="events-count">Cargando eventos...</span>
+    </section>
+    <section class="events-list" aria-labelledby="events-heading">
+      <div class="series-heading">
+        <div><span class="gallery-kicker">Agenda abierta</span><h2 id="events-heading">Agenda de eventos</h2></div>
+        <p id="events-updated">Los eventos se ordenan automáticamente por fecha</p>
+      </div>
+      <div class="events-group" aria-labelledby="upcoming-events-heading">
+        <div class="events-group-heading"><h3 id="upcoming-events-heading">Próximos eventos</h3><span id="upcoming-events-count"></span></div>
+        <div id="upcoming-events-list" class="events-list-items" aria-live="polite"></div>
+      </div>
+      <div class="events-group events-group-previous" aria-labelledby="previous-events-heading">
+        <div class="events-group-heading"><h3 id="previous-events-heading">Eventos anteriores</h3><span id="previous-events-count"></span></div>
+        <div id="previous-events-list" class="events-list-items" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+  <script src="assets/js/eventos.js?v=2" defer></script>
+</body>
+</html>

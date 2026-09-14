@@ -1,16 +1,71 @@
 (() => {
+  function setupMobileMenu() {
+    const toggleButtons = document.querySelectorAll('[data-mobile-menu-toggle]');
+    const closeButtons = document.querySelectorAll('[data-mobile-menu-close]');
+    const drawers = document.querySelectorAll('.mobile-nav-drawer');
+    const backdrops = document.querySelectorAll('.mobile-nav-backdrop');
+
+    const closeMenus = () => {
+      drawers.forEach((drawer) => {
+        drawer.classList.remove('is-open');
+        drawer.setAttribute('aria-hidden', 'true');
+      });
+      backdrops.forEach((backdrop) => {
+        backdrop.hidden = true;
+      });
+      toggleButtons.forEach((button) => {
+        button.setAttribute('aria-expanded', 'false');
+      });
+    };
+
+    const openMenu = (drawer) => {
+      drawers.forEach((item) => {
+        if (item !== drawer) item.classList.remove('is-open');
+      });
+      drawer.classList.add('is-open');
+      drawer.setAttribute('aria-hidden', 'false');
+      const matchedBackdrop = document.getElementById(drawer.id + '-backdrop');
+      if (matchedBackdrop) matchedBackdrop.hidden = false;
+      toggleButtons.forEach((button) => {
+        const targetId = button.getAttribute('aria-controls');
+        button.setAttribute('aria-expanded', targetId === drawer.id ? 'true' : 'false');
+      });
+    };
+
+    toggleButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const targetId = button.getAttribute('aria-controls');
+        const drawer = document.getElementById(targetId);
+        if (!drawer) return;
+        if (drawer.classList.contains('is-open')) {
+          closeMenus();
+        } else {
+          openMenu(drawer);
+        }
+      });
+    });
+
+    closeButtons.forEach((button) => button.addEventListener('click', closeMenus));
+    backdrops.forEach((backdrop) => backdrop.addEventListener('click', closeMenus));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeMenus();
+    });
+  }
+
+  setupMobileMenu();
+
   const auctionWorks = [
-    'assets/images/obras_subasta/WhatsApp Image 2026-09-08 at 1.07.35 PM.jpeg',
-    'assets/images/obras_subasta/WhatsApp Image 2026-09-08 at 1.07.36 PM (1).jpeg',
-    'assets/images/obras_subasta/WhatsApp Image 2026-09-08 at 1.07.36 PM.jpeg',
-    'assets/images/obras_subasta/WhatsApp Image 2026-09-08 at 1.07.37 PM (1).jpeg',
-    'assets/images/obras_subasta/WhatsApp Image 2026-09-08 at 1.07.37 PM.jpeg',
-    'assets/images/obras_subasta/WhatsApp Image 2026-09-08 at 1.07.38 PM.jpeg',
-    'assets/images/obras_subasta/WhatsApp Image 2026-09-08 at 1.07.39 PM (1).jpeg',
-    'assets/images/obras_subasta/WhatsApp Image 2026-09-08 at 1.07.39 PM (2).jpeg',
-    'assets/images/obras_subasta/WhatsApp Image 2026-09-08 at 1.07.39 PM (3).jpeg',
-    'assets/images/obras_subasta/WhatsApp Image 2026-09-08 at 1.07.39 PM (4).jpeg',
-    'assets/images/obras_subasta/WhatsApp Image 2026-09-08 at 1.07.39 PM.jpeg'
+    'assets/images/obras_subasta/obra1.jpeg',
+    'assets/images/obras_subasta/obra2.jpeg',
+    'assets/images/obras_subasta/obra3.jpeg',
+    'assets/images/obras_subasta/obra4.jpeg',
+    'assets/images/obras_subasta/obra5.jpeg',
+    'assets/images/obras_subasta/obra6.jpeg',
+    'assets/images/obras_subasta/obra7.jpeg',
+    'assets/images/obras_subasta/obra8.jpeg',
+    'assets/images/obras_subasta/obra9.jpeg',
+    'assets/images/obras_subasta/obra10.jpeg',
+    'assets/images/obras_subasta/obra11.jpeg'
   ];
 
   const collectionSeries = {
@@ -55,21 +110,56 @@
   let currentWorks = [];
   let currentIndex = 0;
 
+  const formatSeriesLabel = (value) => {
+    const cleanValue = String(value)
+      .replace(/^SERIE\s+/i, '')
+      .replaceAll('_', ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    const words = cleanValue.split(' ');
+    const lowercaseWords = new Set(['de', 'del', 'y', 'en', 'la', 'el', 'los', 'las', 'un', 'una', 'a', 'al', 'o', 'por']);
+
+    return words
+      .map((word, index) => {
+        if (!word) return word;
+        const normalized = word.toLowerCase();
+        if (index === 0 || !lowercaseWords.has(normalized)) {
+          return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+        }
+        return normalized;
+      })
+      .join(' ');
+  };
+
   const titleFromPath = (path) => decodeURIComponent(path.split('/').pop()).replace(/\.[^.]+$/, '').replace(/^\d+\.\s*/, '');
-  const seriesFromPath = (path) => path.includes('obras_subasta') ? 'Obras para la subasta' : path.split('/')[3].replaceAll('_', ' ');
+  const artworkDetails = {
+    obra7: {
+      title: 'La liebre de Durero',
+      author: 'Gloria Rivera',
+      technique: 'Dibujo tinta china sepia',
+      size: '29,5 × 24 cm'
+    }
+  };
+  const detailsFor = (path) => artworkDetails[titleFromPath(path)] || null;
+  const seriesFromPath = (path) => path.includes('obras_subasta') ? 'Obras para la subasta' : formatSeriesLabel(path.split('/')[3].replaceAll('_', ' '));
   const descriptionFor = (path) => path.includes('obras_subasta')
     ? 'Obra donada para la Primera Subasta Solidaria de Arte de la Fundación Casa del Pan.'
-    : `Obra de la ${seriesFromPath(path).toLowerCase()} de la colección de la Fundación Casa del Pan.`;
+    : `Obra de la serie ${seriesFromPath(path)} de la colección de la Fundación Casa del Pan.`;
   const imagePath = (folder, file) => `assets/images/COLECCION FCP/${folder}/${file}`;
   const allWorks = galleryRoot.dataset.galleryRoot === 'auction'
     ? auctionWorks.map((path) => ({ path, series: 'Obras para la subasta' }))
     : Object.entries(collectionSeries).flatMap(([series, files]) => files.map((file) => ({ path: imagePath(series, file), series })));
 
   function card(work, index) {
-    const title = titleFromPath(work.path);
+    const details = detailsFor(work.path);
+    const title = details?.title || titleFromPath(work.path);
+    const description = details
+      ? `${details.author} · ${details.technique} · ${details.size}`
+      : descriptionFor(work.path);
     const figure = document.createElement('figure');
     figure.className = 'art-card';
-    figure.innerHTML = `<button type="button" aria-label="Ver ${title} en pantalla completa"><img loading="lazy" src="${work.path}" alt="${title}" data-index="${index}"><figcaption><span class="art-title">${title}</span><span class="art-meta"><span>${work.series.replace('SERIE ', '')}</span><span data-dimensions>Calculando tamaño...</span></span><p class="art-description">${descriptionFor(work.path)}</p></figcaption></button>`;
+    figure.innerHTML = `<button type="button" aria-label="Ver ${title} en pantalla completa"><img loading="lazy" src="${work.path}" alt="${title}" data-index="${index}"><figcaption><span class="art-title">${title}</span><span class="art-meta"><span>${formatSeriesLabel(work.series)}</span><span data-dimensions>Calculando tamaño...</span></span><p class="art-description">${description}</p></figcaption></button>`;
     const image = figure.querySelector('img');
     image.addEventListener('load', () => {
       figure.querySelector('[data-dimensions]').textContent = `${image.naturalWidth} × ${image.naturalHeight} px`;
@@ -88,7 +178,7 @@
     Object.entries(collectionSeries).forEach(([series, files]) => {
       const section = document.createElement('section');
       section.className = 'series-section';
-      section.innerHTML = `<div class="series-heading"><div><span class="gallery-kicker">Serie</span><h2>${series.replace('SERIE ', '')}</h2></div><p>${files.length} obras</p></div><div class="gallery-grid"></div>`;
+      section.innerHTML = `<div class="series-heading"><div><span class="gallery-kicker">Serie</span><h2>${formatSeriesLabel(series)}</h2></div><p>${files.length} obras</p></div><div class="gallery-grid"></div>`;
       const grid = section.querySelector('.gallery-grid');
       files.forEach((file, index) => grid.append(card({ path: imagePath(series, file), series }, allWorks.findIndex((work) => work.path === imagePath(series, file)))));
       seriesContainer.append(section);
@@ -97,13 +187,18 @@
 
   function updateLightbox() {
     const work = currentWorks[currentIndex];
-    const title = titleFromPath(work.path);
+    const details = detailsFor(work.path);
+    const title = details?.title || titleFromPath(work.path);
     lightboxImage.src = work.path;
     lightboxImage.alt = title;
     lightboxTitle.textContent = title;
-    lightboxDescription.textContent = descriptionFor(work.path);
-    lightboxSize.textContent = 'Cargando dimensiones...';
-    lightboxImage.onload = () => { lightboxSize.textContent = `${lightboxImage.naturalWidth} × ${lightboxImage.naturalHeight} px`; };
+    lightboxDescription.textContent = details
+      ? `${details.author} · ${details.technique}`
+      : descriptionFor(work.path);
+    lightboxSize.textContent = details?.size || 'Cargando dimensiones...';
+    lightboxImage.onload = () => {
+      if (!details) lightboxSize.textContent = `${lightboxImage.naturalWidth} × ${lightboxImage.naturalHeight} px`;
+    };
   }
 
   function openLightbox(index) {

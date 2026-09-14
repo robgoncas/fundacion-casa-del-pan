@@ -1,0 +1,61 @@
+[
+  {
+    "id": "subasta-arte-solidaridad",
+    "slug": "subasta-arte-solidaridad",
+    "title": "I Subasta Benéfica de Obras de Arte",
+    "subtitle": "Arte y Solidaridad",
+    "date": "2026-11-14",
+    "startTime": "11:00",
+    "endTime": "14:00",
+    "location": "Club Alemán de Valparaíso, Salvador Donoso 1337",
+    "description": "Una jornada para encontrarnos alrededor del arte y reunir recursos para sostener el arriendo anual de nuestra sede comunitaria en Avenida Francia.",
+    "cover": "assets/images/logo-evento-subasta.jpeg",
+    "detailUrl": "obras-subastas.html",
+    "gallery": [],
+    "status": "published"
+  },
+  {
+    "id": "expo-casa-del-pan-2025",
+    "slug": "expo-casa-del-pan-2025",
+    "title": "Expo Casa del Pan 2025",
+    "subtitle": "Exposición de obras realizadas con materiales reciclados",
+    "date": "2025-12-24",
+    "startTime": "",
+    "endTime": "",
+    "location": "Fundación Casa del Pan",
+    "description": "Poemas collages, máscaras, tejidos, cerámicas con greda y papier maché, mandalas dibujados, pintados y en collage. Todas estas obras están realizadas con cartón, cajas, revistas, goma eva, greda y otros materiales reciclados.",
+    "cover": "assets/images/eventos/expo-casa-del-pan-2025/portada.jpg",
+    "detailUrl": "evento.html?slug=expo-casa-del-pan-2025",
+    "gallery": [
+      {
+        "src": "assets/images/eventos/expo-casa-del-pan-2025/foto-01.jpg",
+        "alt": "Expo Casa del Pan 2025 - foto 1"
+      },
+      {
+        "src": "assets/images/eventos/expo-casa-del-pan-2025/foto-02.jpg",
+        "alt": "Expo Casa del Pan 2025 - foto 2"
+      },
+      {
+        "src": "assets/images/eventos/expo-casa-del-pan-2025/foto-03.jpg",
+        "alt": "Expo Casa del Pan 2025 - foto 3"
+      },
+      {
+        "src": "assets/images/eventos/expo-casa-del-pan-2025/foto-04.jpg",
+        "alt": "Expo Casa del Pan 2025 - foto 4"
+      },
+      {
+        "src": "assets/images/eventos/expo-casa-del-pan-2025/foto-05.jpg",
+        "alt": "Expo Casa del Pan 2025 - foto 5"
+      },
+      {
+        "src": "assets/images/eventos/expo-casa-del-pan-2025/foto-06.jpg",
+        "alt": "Expo Casa del Pan 2025 - foto 6"
+      },
+      {
+        "src": "assets/images/eventos/expo-casa-del-pan-2025/foto-07.jpg",
+        "alt": "Expo Casa del Pan 2025 - foto 7"
+      }
+    ],
+    "status": "published"
+  }
+]

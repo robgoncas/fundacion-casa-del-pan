@@ -20,22 +20,63 @@
       </a>
       <nav aria-label="Navegación principal" class="gallery-links hidden xl:flex items-center gap-space-lg">
         <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" href="index.html">Inicio</a>
-        <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" href="index.html#quienes-somos">Quiénes<br>Somos</a>
-        <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" href="index.html#directorio">Directorio</a>
+        <details class="group relative">
+          <summary class="list-none cursor-pointer font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2 flex items-center gap-1">
+            Nosotros
+            <span class="material-symbols-outlined text-[18px]">expand_more</span>
+          </summary>
+          <div class="absolute left-0 top-full mt-2 w-52 rounded-xl bg-surface-container-lowest shadow-lg border border-surface-container-high p-2 z-20 flex flex-col gap-1">
+            <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg px-2 py-1.5" href="index.html#quienes-somos">Quiénes Somos</a>
+            <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg px-2 py-1.5" href="index.html#directorio">Directorio</a>
+          </div>
+        </details>
         <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" href="index.html#programas">Programas</a>
         <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" href="coleccion-fcp.html">Galería</a>
-        <a aria-current="page" class="font-label-md text-label-md text-primary font-bold transition-colors py-2" href="obras-subastas.html">Eventos</a>
+        <a aria-current="page" class="font-label-md text-label-md text-primary font-bold transition-colors py-2" href="eventos.html">Eventos</a>
         <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" href="index.html#transparencia">Transparencia</a>
         <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" href="index.html#contacto">Contacto</a>
       </nav>
-      <div class="gallery-actions flex items-center gap-space-sm"><a class="gallery-member-link hidden sm:inline-flex items-center justify-center min-h-[48px] px-space-md py-space-xs rounded-xl bg-primary-container text-on-primary font-label-md text-label-md shadow-sm hover:brightness-105 active:scale-98 transition-all" href="index.html#hazte-socio">Hazte Socio</a><a class="gallery-link-cta inline-flex items-center justify-center min-h-[48px] px-space-lg py-space-xs rounded-xl bg-tertiary text-on-tertiary font-label-md text-label-md shadow-md hover:brightness-110 active:scale-98 transition-all gap-space-xs" href="index.html#donar"><span aria-hidden="true" class="material-symbols-outlined text-[20px]">favorite</span><span>Donar</span></a><span class="gallery-profile w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-1" aria-hidden="true"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></span></div>
+      <div class="gallery-actions flex items-center gap-space-sm">
+        <button type="button" class="mobile-menu-toggle xl:hidden" aria-label="Abrir menú principal" aria-controls="gallery-mobile-menu" aria-expanded="false" data-mobile-menu-toggle>
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+        <a class="gallery-member-link hidden sm:inline-flex items-center justify-center min-h-[48px] px-space-md py-space-xs rounded-xl bg-primary-container text-on-primary font-label-md text-label-md shadow-sm hover:brightness-105 active:scale-98 transition-all" href="index.html#hazte-socio">Hazte Socio</a><a class="gallery-link-cta inline-flex items-center justify-center min-h-[48px] px-space-lg py-space-xs rounded-xl bg-tertiary text-on-tertiary font-label-md text-label-md shadow-md hover:brightness-110 active:scale-98 transition-all gap-space-xs" href="index.html#donar"><span aria-hidden="true" class="material-symbols-outlined text-[20px]">favorite</span><span>Donar</span></a><span class="gallery-profile w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-1" aria-hidden="true"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></span></div>
     </div>
   </header>
+  <div class="mobile-nav-backdrop" id="gallery-mobile-menu-backdrop" hidden></div>
+  <aside class="mobile-nav-drawer" id="gallery-mobile-menu" aria-label="Menú principal móvil" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="mobile-nav-brand" aria-label="Inicio de la Fundación Casa del Pan">
+        <img src="assets/images/logo.png" alt="Logo de la Fundación Casa del Pan" width="40" height="40" />
+        <span>Casa del Pan</span>
+      </a>
+      <button type="button" class="mobile-nav-close" aria-label="Cerrar menú" data-mobile-menu-close>
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <nav class="mobile-nav-links" aria-label="Menú móvil">
+      <a href="index.html">Inicio</a>
+      <details class="mobile-nav-group">
+        <summary>Nosotros</summary>
+        <div class="mobile-nav-submenu">
+          <a href="index.html#quienes-somos">Quiénes somos</a>
+          <a href="index.html#directorio">Directorio</a>
+        </div>
+      </details>
+      <a href="index.html#programas">Programas</a>
+      <a href="coleccion-fcp.html">Galería</a>
+      <a href="eventos.html">Eventos</a>
+      <a href="index.html#transparencia">Transparencia</a>
+      <a href="index.html#contacto">Contacto</a>
+      <a href="index.html#hazte-socio" class="mobile-nav-cta">Hazte Socio</a>
+    </nav>
+  </aside>
   <aside aria-label="Evento Solidario Destacado" class="auction-banner w-full bg-inverse-surface px-gutter-mobile lg:px-gutter-desktop py-space-sm shadow-sm">
     <div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-space-sm w-full"><div class="auction-banner-inner flex items-center gap-space-sm"><img class="h-14 w-14 rounded-xl object-cover shadow-sm" src="assets/images/logo-evento-subasta.jpeg" alt="Logo de la subasta Arte y Solidaridad" width="56" height="56" /><span aria-hidden="true" class="auction-banner-icon inline-flex p-space-xs rounded-full bg-tertiary text-on-tertiary animate-pulse"><span class="material-symbols-outlined text-[20px]">palette</span></span><div class="flex flex-col"><span class="auction-banner-kicker font-label-sm text-label-sm uppercase tracking-wider">Gran Hito 2026</span><p class="font-headline-sm text-headline-sm">I Subasta Benéfica de Obras de Arte: <span>Arte y Solidaridad</span></p><p class="font-body-sm text-body-sm">14 de Noviembre de 2026 · 11:00 hrs · Club Alemán de Valparaíso (Salvador Donoso 1337). Meta: Arriendo Anual Avenida Francia ($4.800.000 / 48 obras).</p></div></div></div>
   </aside>
   <main class="gallery-main" data-gallery-root="auction">
     <section class="gallery-hero">
+      <a class="event-detail-link" href="eventos.html"><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>Volver a la lista de eventos</a>
       <span class="gallery-kicker">Primera Subasta Solidaria de Arte · 2026</span>
       <h1>Obras que sostienen una casa abierta.</h1>
       <p>Conoce las obras visuales comprometidas para la subasta de la Fundación Casa del Pan. Cada imagen conserva el nombre de archivo recibido y permite consultar sus dimensiones originales.</p>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mantenedor de eventos | Fundación Casa del Pan</title>
+  <meta name="description" content="Mantenedor local para crear y publicar eventos de la Fundación Casa del Pan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/galleries.css">
+</head>
+<body class="gallery-body admin-body">
+  <header class="gallery-header">
+    <div class="gallery-nav">
+      <a class="gallery-brand" href="eventos.html" aria-label="Volver a eventos">
+        <img alt="Fundación Casa del Pan Logo" src="assets/images/logo.png" width="32" height="32">
+        <div><span>Casa del Pan</span><span>Mantenedor de eventos</span></div>
+      </a>
+      <nav class="gallery-links" aria-label="Navegación del mantenedor">
+        <a href="eventos.html">Ver eventos</a>
+        <a href="index.html">Sitio principal</a>
+      </nav>
+      <div class="gallery-actions">
+        <a class="gallery-link-cta" href="eventos.html"><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span><span>Volver a eventos</span></a>
+      </div>
+    </div>
+  </header>
+  <main class="gallery-main admin-main">
+    <section class="gallery-hero">
+      <span class="gallery-kicker">Herramienta local de publicación</span>
+      <h1>Crear un evento.</h1>
+      <p>Completa la información, selecciona la portada y agrega las fotos. El mantenedor generará el JSON y la carpeta de imágenes para que la web pueda leerlos.</p>
+      <span class="gallery-stat">Publicación ordenada por fecha</span>
+    </section>
+    <section class="admin-layout" aria-labelledby="admin-form-title">
+      <form class="admin-form" id="event-form">
+        <div class="admin-section-heading">
+          <span class="gallery-kicker">1 · Información</span>
+          <h2 id="admin-form-title">Datos del evento</h2>
+        </div>
+        <div class="admin-fields admin-fields-two">
+          <label>Título del evento<input id="event-title" name="title" required placeholder="Ej. Feria de arte comunitario"></label>
+          <label>Subtítulo<input id="event-subtitle" name="subtitle" placeholder="Ej. Crear, compartir, sostener"></label>
+        </div>
+        <div class="admin-fields admin-fields-three">
+          <label>Fecha<input id="event-date" name="date" type="date" required></label>
+          <label>Hora de inicio<input id="event-start" name="startTime" type="time"></label>
+          <label>Hora de término<input id="event-end" name="endTime" type="time"></label>
+        </div>
+        <label>Lugar<input id="event-location" name="location" required placeholder="Dirección o espacio donde se realizará"></label>
+        <label>Descripción<textarea id="event-description" name="description" rows="5" required placeholder="Cuenta qué ocurrirá y por qué este evento importa."></textarea></label>
+        <div class="admin-section-heading admin-section-heading-spaced">
+          <span class="gallery-kicker">2 · Imágenes</span>
+          <h2>Fotos del evento</h2>
+        </div>
+        <div class="admin-upload-grid">
+          <label class="admin-upload-field">Portada<input id="event-cover" type="file" accept="image/*"><small>Se mostrará en la lista de eventos.</small></label>
+          <label class="admin-upload-field">Galería<input id="event-gallery" type="file" accept="image/*" multiple><small>Puedes seleccionar varias imágenes.</small></label>
+        </div>
+        <div class="admin-preview" id="image-preview" aria-live="polite"><p>Aún no se han seleccionado imágenes.</p></div>
+        <div class="admin-section-heading admin-section-heading-spaced">
+          <span class="gallery-kicker">3 · Publicar</span>
+          <h2>Generar archivos</h2>
+        </div>
+        <label class="admin-checkbox"><input id="event-published" type="checkbox" checked><span>Publicar este evento en la lista</span></label>
+        <div class="admin-actions">
+          <button class="admin-primary" type="submit"><span class="material-symbols-outlined" aria-hidden="true">folder_open</span>Generar estructura en el proyecto</button>
+          <button class="admin-secondary" type="button" id="download-json"><span class="material-symbols-outlined" aria-hidden="true">download</span>Descargar JSON</button>
+        </div>
+        <p class="admin-feedback" id="admin-feedback" role="status"></p>
+      </form>
+      <aside class="admin-help">
+        <span class="gallery-kicker">Cómo funciona</span>
+        <h2>Una carpeta por evento.</h2>
+        <p>Al generar la estructura, selecciona la carpeta raíz del proyecto. Se crearán automáticamente:</p>
+        <ul>
+          <li><code>assets/data/eventos.json</code></li>
+          <li><code>assets/images/eventos/tu-evento/</code></li>
+          <li>La portada y las fotos de la galería</li>
+        </ul>
+        <p class="admin-help-note">Selecciona la carpeta raíz del proyecto, la que contiene <code>assets</code>; no selecciones <code>assets</code> ni <code>assets/images</code>. Para escribir directamente, abre esta herramienta desde un servidor local como Live Server. Si el navegador no permite escribir, usa “Descargar JSON”.</p>
+      </aside>
+    </section>
+  </main>
+  <script src="assets/js/admin-eventos.js" defer></script>
+</body>
+</html>

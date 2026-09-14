@@ -123,6 +123,125 @@
     if (form) form.reset();
   }
 
+  function setupMobileMenu() {
+    const toggleButtons = document.querySelectorAll('[data-mobile-menu-toggle]');
+    const closeButtons = document.querySelectorAll('[data-mobile-menu-close]');
+    const drawers = document.querySelectorAll('.mobile-nav-drawer');
+    const backdrops = document.querySelectorAll('.mobile-nav-backdrop');
+
+    const closeMenus = () => {
+      drawers.forEach((drawer) => {
+        drawer.classList.remove('is-open');
+        drawer.setAttribute('aria-hidden', 'true');
+      });
+      backdrops.forEach((backdrop) => {
+        backdrop.hidden = true;
+      });
+      toggleButtons.forEach((button) => {
+        button.setAttribute('aria-expanded', 'false');
+      });
+    };
+
+    const openMenu = (drawer) => {
+      drawers.forEach((item) => {
+        if (item !== drawer) item.classList.remove('is-open');
+      });
+      drawer.classList.add('is-open');
+      drawer.setAttribute('aria-hidden', 'false');
+      const backdrop = document.getElementById(drawer.id + '-backdrop') || document.querySelector('.mobile-nav-backdrop');
+      if (backdrop) {
+        backdrop.hidden = false;
+      }
+      toggleButtons.forEach((button) => {
+        button.setAttribute('aria-expanded', button.closest('.mobile-nav-drawer') === drawer ? 'true' : 'false');
+      });
+    };
+
+    toggleButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const targetId = button.getAttribute('aria-controls');
+        const drawer = document.getElementById(targetId);
+        if (!drawer) return;
+        const isOpen = drawer.classList.contains('is-open');
+        if (isOpen) {
+          closeMenus();
+        } else {
+          openMenu(drawer);
+        }
+      });
+    });
+
+    closeButtons.forEach((button) => {
+      button.addEventListener('click', closeMenus);
+    });
+
+    backdrops.forEach((backdrop) => {
+      backdrop.addEventListener('click', closeMenus);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeMenus();
+    });
+  }
+
+  setupMobileMenu();
+
+  function setupAccessibilityPanel() {
+    const toggle = document.querySelector('[data-accessibility-toggle]');
+    const panel = document.querySelector('#accessibility-panel');
+    const close = document.querySelector('[data-accessibility-close]');
+    const reset = document.querySelector('[data-accessibility-reset]');
+    const status = document.querySelector('[data-accessibility-status]');
+    const options = document.querySelectorAll('[data-accessibility-option]');
+    if (!toggle || !panel) return;
+
+    const storageKey = 'casa-del-pan-accessibility';
+    const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
+
+    const applyOption = (option, enabled) => {
+      document.body.classList.toggle(`accessibility-${option}`, enabled);
+    };
+
+    options.forEach((input) => {
+      input.checked = Boolean(saved[input.dataset.accessibilityOption]);
+      applyOption(input.dataset.accessibilityOption, input.checked);
+      input.addEventListener('change', () => {
+        const values = Object.fromEntries([...options].map((item) => [item.dataset.accessibilityOption, item.checked]));
+        localStorage.setItem(storageKey, JSON.stringify(values));
+        applyOption(input.dataset.accessibilityOption, input.checked);
+        if (status) status.textContent = `${input.parentElement.querySelector('strong').textContent}: ${input.checked ? 'activado' : 'desactivado'}.`;
+      });
+    });
+
+    const closePanel = () => {
+      panel.hidden = true;
+      toggle.setAttribute('aria-expanded', 'false');
+    };
+
+    toggle.addEventListener('click', () => {
+      panel.hidden = !panel.hidden;
+      toggle.setAttribute('aria-expanded', String(!panel.hidden));
+      if (!panel.hidden) panel.querySelector('input')?.focus();
+    });
+    close?.addEventListener('click', closePanel);
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !panel.hidden) {
+        closePanel();
+        toggle.focus();
+      }
+    });
+    reset?.addEventListener('click', () => {
+      options.forEach((input) => {
+        input.checked = false;
+        applyOption(input.dataset.accessibilityOption, false);
+      });
+      localStorage.removeItem(storageKey);
+      if (status) status.textContent = 'Opciones restablecidas.';
+    });
+  }
+
+  setupAccessibilityPanel();
+
   window.downloadCalendarEvent = downloadCalendarEvent;
   window.copiarDatosBancarios = copiarDatosBancarios;
   window.seleccionarMonto = seleccionarMonto;
