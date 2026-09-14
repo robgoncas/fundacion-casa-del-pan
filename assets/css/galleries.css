@@ -101,6 +101,11 @@ body.gallery-body {
   z-index: 50;
 }
 
+.mobile-nav-backdrop[hidden],
+.mobile-nav-drawer[hidden] {
+  display: none !important;
+}
+
 .mobile-nav-drawer {
   position: fixed;
   top: 0;
@@ -208,7 +213,8 @@ body.gallery-body {
 @media (min-width: 1280px) {
   .mobile-menu-toggle,
   .mobile-nav-backdrop,
-  .mobile-nav-drawer {
+  .mobile-nav-drawer,
+  .mobile-nav-drawer.is-open {
     display: none !important;
   }
 }
