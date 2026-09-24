@@ -6,9 +6,11 @@
     return;
   }
 
-  const formatDate = (date) => new Intl.DateTimeFormat('es-CL', {
-    day: 'numeric', month: 'long', year: 'numeric'
-  }).format(new Date(`${date}T12:00:00`));
+  const formatDate = (date) => date
+    ? new Intl.DateTimeFormat('es-CL', {
+      day: 'numeric', month: 'long', year: 'numeric'
+    }).format(new Date(`${date}T12:00:00`))
+    : 'Fecha por confirmar';
 
   function render(event) {
     document.title = `${event.title} | Fundación Casa del Pan`;
@@ -49,7 +51,7 @@
     const locationLabel = document.createElement('dt');
     locationLabel.textContent = 'Lugar';
     const locationValue = document.createElement('dd');
-    locationValue.textContent = event.location;
+    locationValue.textContent = event.location || 'Lugar por confirmar';
     location.append(locationLabel, locationValue);
     facts.append(schedule, location);
     root.append(facts);

@@ -65,7 +65,9 @@
     'assets/images/obras_subasta/obra8.jpeg',
     'assets/images/obras_subasta/obra9.jpeg',
     'assets/images/obras_subasta/obra10.jpeg',
-    'assets/images/obras_subasta/obra11.jpeg'
+    'assets/images/obras_subasta/obra11.jpeg',
+    'assets/images/obras_subasta/obra12.jpeg',
+
   ];
 
   const collectionSeries = {

@@ -21,11 +21,13 @@
     status: 'published'
   }];
 
-  const formatDate = (date) => new Intl.DateTimeFormat('es-CL', {
-    day: 'numeric', month: 'short', year: 'numeric'
-  }).format(new Date(`${date}T12:00:00`));
+  const formatDate = (date) => date
+    ? new Intl.DateTimeFormat('es-CL', {
+      day: 'numeric', month: 'short', year: 'numeric'
+    }).format(new Date(`${date}T12:00:00`))
+    : 'Fecha por confirmar';
 
-  const statusFor = (date) => date >= new Date().toISOString().slice(0, 10) ? 'Próximo evento' : 'Evento realizado';
+  const statusFor = (date) => date && date >= new Date().toISOString().slice(0, 10) ? 'Próximo evento' : 'Evento realizado';
 
   function addText(parent, tag, className, text) {
     const element = document.createElement(tag);
@@ -95,8 +97,8 @@
       .filter((event) => event.date >= today)
       .sort((first, second) => second.date.localeCompare(first.date));
     const previousEvents = publishedEvents
-      .filter((event) => event.date < today)
-      .sort((first, second) => second.date.localeCompare(first.date));
+      .filter((event) => !event.date || event.date < today)
+      .sort((first, second) => (second.date || '').localeCompare(first.date || ''));
     count.textContent = `${publishedEvents.length} evento${publishedEvents.length === 1 ? '' : 's'} publicado${publishedEvents.length === 1 ? '' : 's'}`;
     renderGroup(upcomingList, upcomingCount, upcomingEvents, 'No hay próximos eventos publicados.');
     renderGroup(previousList, previousCount, previousEvents, 'No hay eventos anteriores publicados.');

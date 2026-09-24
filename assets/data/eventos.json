@@ -57,5 +57,157 @@
       }
     ],
     "status": "published"
+  },
+    {
+    "id": "taller-de-papel-reciclado",
+    "slug": "taller-de-papel-reciclado",
+    "title": "Taller de Papel Reciclado",
+    "subtitle": "",
+    "date": "2022-11-17",
+    "startTime": "15:00",
+    "endTime": "18:00",
+    "location": "Fundación Javier Arrieta",
+    "description": "Estas fotografías corresponden al Taller de Papel Reciclado en la Fundación Javier Arrieta, una actividad especialmente dirigida a adultos mayores.\n​Durante el taller, los participantes aprendieron el proceso artesanal de elaboración de papel paso a paso:\n​Preparación: Se recolectan y pican diversos tipos de papel, los cuales se remojan y se procesan para formar la pulpa.\n​Moldeado y decoración: La pulpa se distribuye sobre bastidores de distintos tamaños. En esta etapa se agregan elementos naturales como hojas o semillas, los cuales quedan incrustados en la textura del papel.\n​Prensado y secado: Se retira el exceso de agua utilizando una esponja y telas. Finalmente, se desmolda el papel sobre hojas de diario para completar el proceso de secado.",
+    "cover": "assets/images/eventos/taller_papel_reciclado/foto-01.jpg",
+    "detailUrl": "evento.html?slug=taller-de-papel-reciclado",
+    "gallery": [
+      {
+        "src": "assets/images/eventos/taller_papel_reciclado/foto-01.jpg",
+        "alt": "Taller de Papel Reciclado - foto 1"
+      },
+      {
+        "src": "assets/images/eventos/taller_papel_reciclado/foto-02.jpg",
+        "alt": "Taller de Papel Reciclado - foto 2"
+      },
+      {
+        "src": "assets/images/eventos/taller_papel_reciclado/foto-03.jpg",
+        "alt": "Taller de Papel Reciclado - foto 3"
+      },
+      {
+        "src": "assets/images/eventos/taller_papel_reciclado/foto-04.jpg",
+        "alt": "Taller de Papel Reciclado - foto 4"
+      },
+      {
+        "src": "assets/images/eventos/taller_papel_reciclado/foto-05.jpg",
+        "alt": "Taller de Papel Reciclado - foto 5"
+      },
+      {
+        "src": "assets/images/eventos/taller_papel_reciclado/foto-06.jpg",
+        "alt": "Taller de Papel Reciclado - foto 6"
+      },
+      {
+        "src": "assets/images/eventos/taller_papel_reciclado/foto-07.jpg",
+        "alt": "Taller de Papel Reciclado - foto 7"
+      },
+      {
+        "src": "assets/images/eventos/taller_papel_reciclado/foto-08.jpeg",
+        "alt": "Taller de Papel Reciclado - foto 8"
+      },
+      {
+        "src": "assets/images/eventos/taller_papel_reciclado/foto-09.jpeg",
+        "alt": "Taller de Papel Reciclado - foto 9"
+      },
+      {
+        "src": "assets/images/eventos/taller_papel_reciclado/foto-10.jpeg",
+        "alt": "Taller de Papel Reciclado - foto 10"
+      },
+      {
+        "src": "assets/images/eventos/taller_papel_reciclado/foto-11.jpeg",
+        "alt": "Taller de Papel Reciclado - foto 11"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "taller-musica-folclorico",
+    "slug": "taller-musica-folclorico",
+    "title": "Taller de Música Folclórica",
+    "subtitle": "",
+    "date": "",
+    "startTime": "",
+    "endTime": "",
+    "location": "",
+    "description": "Estas fotografías corresponden al taller que realizó la profesora de música Elba Ortega Pardo con un grupo de adultos mayores, consistente en el aprendizaje de bailes, cantos y vestuarios folclóricos del norte, centro y sur de Chile.",
+    "cover": "assets/images/eventos/taller-musica-folclorico/foto-01.jpg",
+    "detailUrl": "evento.html?slug=taller-musica-folclorico",
+    "gallery": [
+      {
+        "src": "assets/images/eventos/taller-musica-folclorico/foto-01.jpg",
+        "alt": "Taller de Música Folclórica - foto 1"
+      },
+      {
+        "src": "assets/images/eventos/taller-musica-folclorico/foto-02.jpg",
+        "alt": "Taller de Música Folclórica - foto 2"
+      },
+      {
+        "src": "assets/images/eventos/taller-musica-folclorico/foto-03.jpg",
+        "alt": "Taller de Música Folclórica - foto 3"
+      },
+      {
+        "src": "assets/images/eventos/taller-musica-folclorico/foto-04.jpg",
+        "alt": "Taller de Música Folclórica - foto 4"
+      },
+      {
+        "src": "assets/images/eventos/taller-musica-folclorico/foto-05.jpg",
+        "alt": "Taller de Música Folclórica - foto 5"
+      },
+      {
+        "src": "assets/images/eventos/taller-musica-folclorico/foto-06.jpg",
+        "alt": "Taller de Música Folclórica - foto 6"
+      },
+      {
+        "src": "assets/images/eventos/taller-musica-folclorico/foto-07.jpg",
+        "alt": "Taller de Música Folclórica - foto 7"
+      },
+      {
+        "src": "assets/images/eventos/taller-musica-folclorico/foto-08.jpg",
+        "alt": "Taller de Música Folclórica - foto 8"
+      },
+      {
+        "src": "assets/images/eventos/taller-musica-folclorico/foto-09.jpg",
+        "alt": "Taller de Música Folclórica - foto 9"
+      },
+      {
+        "src": "assets/images/eventos/taller-musica-folclorico/foto-10.jpg",
+        "alt": "Taller de Música Folclórica - foto 10"
+      },
+      {
+        "src": "assets/images/eventos/taller-musica-folclorico/foto-11.jpg",
+        "alt": "Taller de Música Folclórica - foto 11"
+      },
+      {
+        "src": "assets/images/eventos/taller-musica-folclorico/foto-12.jpg",
+        "alt": "Taller de Música Folclórica - foto 12"
+      },
+      {
+        "src": "assets/images/eventos/taller-musica-folclorico/foto-13.jpg",
+        "alt": "Taller de Música Folclórica - foto 13"
+      },
+      {
+        "src": "assets/images/eventos/taller-musica-folclorico/foto-14.jpg",
+        "alt": "Taller de Música Folclórica - foto 14"
+      },
+      {
+        "src": "assets/images/eventos/taller-musica-folclorico/foto-15.jpg",
+        "alt": "Taller de Música Folclórica - foto 15"
+      },
+      {
+        "src": "assets/images/eventos/taller-musica-folclorico/foto-16.jpg",
+        "alt": "Taller de Música Folclórica - foto 16"
+      },
+      {
+        "src": "assets/images/eventos/taller-musica-folclorico/foto-17.jpg",
+        "alt": "Taller de Música Folclórica - foto 17"
+      },
+      {
+        "src": "assets/images/eventos/taller-musica-folclorico/foto-18.jpg",
+        "alt": "Taller de Música Folclórica - foto 18"
+      },
+      {
+        "src": "assets/images/eventos/taller-musica-folclorico/foto-19.jpg",
+        "alt": "Taller de Música Folclórica - foto 19"
+      }
+    ],
+    "status": "published"
   }
 ]
