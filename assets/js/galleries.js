@@ -153,7 +153,7 @@
     obra13: {
       title: 'En estas soledades encantados',
       author: 'Iván Contardo',
-      technique: 'Acrílico, emalte y collage',
+      technique: 'Acrílico, esmalte y collage',
       size: '78×79,5 cm.',
       year: '2016'
     },
