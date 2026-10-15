@@ -67,7 +67,8 @@
     'assets/images/obras_subasta/obra10.jpeg',
     'assets/images/obras_subasta/obra11.jpeg',
     'assets/images/obras_subasta/obra12.jpeg',
-
+    'assets/images/obras_subasta/obra13.jpeg',
+    'assets/images/obras_subasta/obra14.jpeg'
   ];
 
   const collectionSeries = {
@@ -76,7 +77,7 @@
       '50. Para tus yemas.jpg', '51. Pecado y perdón.jpg', '52. Incógnita.jpg', '53. Esferas en un espacio virtual.jpg'
     ],
     'SERIE DESDE LA CRUZ': [
-      '37. Deriva 1.jpg', '39. Desolación.jpg', '40. Descubre la luz.jpg', '41. Descansa en Él.jpg',
+      '37. Deriva 1.jpg', '38. Deriva 2.bmp', '39. Desolación.jpg', '40. Descubre la luz.jpg', '41. Descansa en Él.jpg',
       '42. Poder y Sabiduría.JPG', '43. Me echaste a lo profundo en medio de los mares, y me rodeó la corriente..jpg',
       '44. Dónde estás.jpg', '45. Descubre tu centro.jpg', '46. Dios y Señor.jpg'
     ],
@@ -87,7 +88,8 @@
       '35. La batalla (tríptico) 0.jpg', '36. Caja Negra (aspas).JPG'
     ],
     'SERIE ESPACIOS VIRTUALES': [
-      '2. El río de la sangre.jpg', '3. El fantasma.jpeg', '5. Los Visitantes.jpg', '7. Antiguos Escritos.jpg',
+      '1. Pan y Cielo.bmp', '2. El río de la sangre.jpg', '3. El fantasma.jpeg', '4. Luna.bmp',
+      '5. Los Visitantes.jpg', '6. Ventana Móvil.bmp', '7. Antiguos Escritos.jpg',
       '8. Magos.jpg', '9. Vibraciones humanas.jpeg', '10. Redes secándose.jpg', '11. Viaje astral.jpeg',
       '12. Encuentro.jpg', '13. Las persistentes lágrimas de Dios.jpg',
       '14. Como se ven las montañas desde el mundo de los cubos.jpg', '15. Elenadamus.jpg',
@@ -141,9 +143,65 @@
       author: 'Gloria Rivera',
       technique: 'Dibujo tinta china sepia',
       size: '29,5 × 24 cm'
+    },
+    'Pan y Cielo': { author: '', technique: '', size: '' },
+    Luna: { author: '', technique: '', size: '' },
+    'Ventana Móvil': { author: '', technique: '', size: '' },
+    'Deriva 2': { author: '', technique: '', size: '' },
+    obra13: {
+      title: 'En estas soledades encantados',
+      author: 'Iván Contardo',
+      technique: 'Acrílico, emalte y collage',
+      size: '78×79,5 cm.',
+      year: '2016'
+    },
+    obra3: {
+      title: 'Tercera dimensión',
+      series: 'Viaje Astral',
+      author: 'Adamus',
+      technique: 'Acrílico sobre tela',
+      size: '84x100 cm'
+    },
+    obra2: {
+      title: 'El Ojo de Dios',
+      author: 'Iván Contardo',
+      technique: 'Oleo sobre tela',
+      size: '76x82,5 cm.',
+      year: '2004'
+    },
+    obra6: {
+      title: 'D-15 / Cósmico',
+      author: 'Iván Contardo',
+      technique: 'Acrílico sobre tela',
+      size: '100x84 cm.'
+    },
+    obra10: {
+      title: 'Bohemia',
+      author: 'Ivan Contardo',
+      technique: 'Oleo sobre tela',
+      size: '81×78 cm.'
+    },
+    obra14: {
+      title: 'Inicios',
+      author: 'Juan Delsante Gutierrez',
+      technique: 'Escultura en resina, mármol y bronce',
+      size: '39x30x9,7 cm.',
+      year: '1980'
     }
   };
-  const detailsFor = (path) => artworkDetails[titleFromPath(path)] || null;
+  const detailsFor = (path) => {
+    const details = artworkDetails[titleFromPath(path)];
+    return details && Object.values(details).some((value) => String(value).trim()) ? details : null;
+  };
+  const detailsDescription = (details) => [
+    details.series && `De la serie ${details.series}`,
+    details.author,
+    details.technique,
+    details.size,
+    details.year
+  ]
+    .filter((value) => value && value.trim())
+    .join(' · ');
   const seriesFromPath = (path) => path.includes('obras_subasta') ? 'Obras para la subasta' : formatSeriesLabel(path.split('/')[3].replaceAll('_', ' '));
   const descriptionFor = (path) => path.includes('obras_subasta')
     ? 'Obra donada para la Primera Subasta Solidaria de Arte de la Fundación Casa del Pan.'
@@ -153,12 +211,17 @@
     ? auctionWorks.map((path) => ({ path, series: 'Obras para la subasta' }))
     : Object.entries(collectionSeries).flatMap(([series, files]) => files.map((file) => ({ path: imagePath(series, file), series })));
 
+  const galleryStat = document.querySelector('[data-gallery-stat]');
+  if (galleryStat) {
+    galleryStat.textContent = galleryRoot.dataset.galleryRoot === 'auction'
+      ? `${allWorks.length} obras disponibles para conocer`
+      : `${allWorks.length} obras · ${Object.keys(collectionSeries).length} series`;
+  }
+
   function card(work, index) {
     const details = detailsFor(work.path);
     const title = details?.title || titleFromPath(work.path);
-    const description = details
-      ? `${details.author} · ${details.technique} · ${details.size}`
-      : descriptionFor(work.path);
+    const description = (details && detailsDescription(details)) || descriptionFor(work.path);
     const figure = document.createElement('figure');
     figure.className = 'art-card';
     figure.innerHTML = `<button type="button" aria-label="Ver ${title} en pantalla completa"><img loading="lazy" src="${work.path}" alt="${title}" data-index="${index}"><figcaption><span class="art-title">${title}</span><span class="art-meta"><span>${formatSeriesLabel(work.series)}</span><span data-dimensions>Calculando tamaño...</span></span><p class="art-description">${description}</p></figcaption></button>`;
@@ -194,10 +257,10 @@
     lightboxImage.src = work.path;
     lightboxImage.alt = title;
     lightboxTitle.textContent = title;
-    lightboxDescription.textContent = details
-      ? `${details.author} · ${details.technique}`
-      : descriptionFor(work.path);
-    lightboxSize.textContent = details?.size || 'Cargando dimensiones...';
+    lightboxDescription.textContent = (details && detailsDescription(details)) || descriptionFor(work.path);
+    lightboxSize.textContent = details
+      ? [details.size, details.year].filter(Boolean).join(' · ')
+      : 'Cargando dimensiones...';
     lightboxImage.onload = () => {
       if (!details) lightboxSize.textContent = `${lightboxImage.naturalWidth} × ${lightboxImage.naturalHeight} px`;
     };
