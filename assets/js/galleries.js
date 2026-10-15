@@ -146,6 +146,12 @@
       technique: 'Dibujo tinta china sepia',
       size: '29,5 × 24 cm'
     },
+    obra1: {
+      title: 'Conversación',
+      author: 'Iván Contardo',
+      technique: 'Acrílico sobre tela',
+      size: '84x100 cm'
+    },
     'Pan y Cielo': { author: '', technique: '', size: '' },
     Luna: { author: '', technique: '', size: '' },
     'Ventana Móvil': { author: '', technique: '', size: '' },
@@ -164,6 +170,12 @@
       technique: 'Acrílico sobre tela',
       size: '84x100 cm'
     },
+    obra4: {
+      title: 'Desdoblamiento XVI',
+      author: 'Iván Contardo',
+      technique: 'Acrílico sobre tela',
+      size: '100x84 cm.'
+    },
     obra2: {
       title: 'El Ojo de Dios',
       author: 'Iván Contardo',
@@ -176,6 +188,13 @@
       author: 'Iván Contardo',
       technique: 'Acrílico sobre tela',
       size: '100x84 cm.'
+    },
+    obra9: {
+      title: 'Deriva II',
+      series: 'Desde la Cruz',
+      author: 'Iván Contardo',
+      technique: 'Acrílico sobre tela',
+      size: '100x84cm'
     },
     obra10: {
       title: 'Bohemia',
