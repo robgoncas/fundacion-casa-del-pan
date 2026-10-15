@@ -68,7 +68,9 @@
     'assets/images/obras_subasta/obra11.jpeg',
     'assets/images/obras_subasta/obra12.jpeg',
     'assets/images/obras_subasta/obra13.jpeg',
-    'assets/images/obras_subasta/obra14.jpeg'
+    'assets/images/obras_subasta/obra14.jpeg',
+    'assets/images/obras_subasta/obra15.jpeg',
+    'assets/images/obras_subasta/obra16.jpeg'
   ];
 
   const collectionSeries = {
@@ -187,7 +189,9 @@
       technique: 'Escultura en resina, mármol y bronce',
       size: '39x30x9,7 cm.',
       year: '1980'
-    }
+    },
+    obra15: { author: 'Jesica Neira', technique: '', size: '' },
+    obra16: { author: 'Carlos de los Ríos', technique: '', size: '' }
   };
   const detailsFor = (path) => {
     const details = artworkDetails[titleFromPath(path)];
@@ -224,11 +228,7 @@
     const description = (details && detailsDescription(details)) || descriptionFor(work.path);
     const figure = document.createElement('figure');
     figure.className = 'art-card';
-    figure.innerHTML = `<button type="button" aria-label="Ver ${title} en pantalla completa"><img loading="lazy" src="${work.path}" alt="${title}" data-index="${index}"><figcaption><span class="art-title">${title}</span><span class="art-meta"><span>${formatSeriesLabel(work.series)}</span><span data-dimensions>Calculando tamaño...</span></span><p class="art-description">${description}</p></figcaption></button>`;
-    const image = figure.querySelector('img');
-    image.addEventListener('load', () => {
-      figure.querySelector('[data-dimensions]').textContent = `${image.naturalWidth} × ${image.naturalHeight} px`;
-    });
+    figure.innerHTML = `<button type="button" aria-label="Ver ${title} en pantalla completa"><img loading="lazy" src="${work.path}" alt="${title}" data-index="${index}"><figcaption><span class="art-title">${title}</span><span class="art-meta"><span>${formatSeriesLabel(work.series)}</span></span><p class="art-description">${description}</p></figcaption></button>`;
     figure.querySelector('button').addEventListener('click', () => openLightbox(index));
     return figure;
   }
