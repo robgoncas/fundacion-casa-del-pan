@@ -210,7 +210,12 @@
       year: '1980'
     },
     obra15: { author: 'Jesica Neira', technique: '', size: '' },
-    obra16: { author: 'Carlos de los Ríos', technique: '', size: '' }
+    obra16: {
+      title: 'Lennon',
+      author: 'Carlos De Los Ríos',
+      technique: 'Dibujo a plumilla',
+      size: '27cm x22 cm'
+    }
   };
   const detailsFor = (path) => {
     const details = artworkDetails[titleFromPath(path)];
