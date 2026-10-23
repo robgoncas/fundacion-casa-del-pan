@@ -76,7 +76,7 @@
 </head>
 
 <body
-  class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+  class="home-page bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
   <a class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-space-md focus:py-space-xs focus:bg-primary focus:text-on-primary focus:rounded-lg font-label-md text-label-md shadow-lg"
     href="#contenido-principal">Saltar al contenido principal</a>
   <div class="fixed top-0 left-0 w-full z-50 shadow-[0_1px_8px_rgba(31,16,84,0.04)]">
@@ -105,16 +105,18 @@
     </div> -->
     <header class="bg-surface/95 backdrop-blur-md">
       <div
-        class="h-16 max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between gap-space-md">
-        <a class="flex items-center gap-space-sm group focus:outline-none focus:ring-2 focus:ring-secondary rounded-lg"
-          data-path="inicio" href="#inicio"><img alt="Fundación Casa del Pan Logo" class="h-8 w-auto object-contain"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgMDPKxyQdkXGG69HUpXkb8OEzchcu5LEK6-tCOQBtrBn-WrraT4hQ0c8k1xZf3IlwyektbaS3lV9U2gYzoU5lkCWggBIUl3FS598R6fZvU6GWrycYEljGsE5WyQxg0VP5DBNfshJSGmdiddwy49rf8wI0X_8gsZUFkZFYRxdQ4nkPJhKhFfey3tDL0LLW3jFeDfndRfKeug1uy4JmJrghXL7qDa9eQuiWxTmOP08dGiykdPv54X6p" />
-          <div class="flex flex-col"><span
+        class="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop flex flex-col">
+        <div class="home-brand-row h-14 w-full flex items-center justify-center border-b border-surface-container-high">
+          <a class="flex items-center justify-center gap-space-sm group focus:outline-none focus:ring-2 focus:ring-secondary rounded-lg"
+            data-path="inicio" href="#inicio">
+            <img alt="Logo de la Fundación Casa del Pan" class="home-brand-logo h-10 w-10 object-contain"
+              src="assets/images/logo.png" width="40" height="40" />
+            <span
               class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-tight group-hover:text-primary transition-colors">Casa
-              del Pan</span><span
-              class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Valparaíso ·
-              Chile</span></div>
-        </a>
+              del Pan</span>
+          </a>
+        </div>
+        <div class="h-16 w-full flex items-center justify-between gap-space-md">
         <nav aria-label="Navegación principal" class="hidden xl:flex items-center gap-space-lg"
           data-active-classes="text-primary font-bold"><a aria-current="page"
             class="transition-colors py-2 text-primary font-bold" data-path="inicio" href="#inicio">Inicio</a>
@@ -153,6 +155,7 @@
           <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-1"><span
               class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
         </div>
+        </div>
       </div>
     </header>
     <div class="mobile-nav-backdrop" id="mobile-menu-backdrop" hidden></div>
@@ -186,7 +189,7 @@
       </nav>
     </aside>
   </div>
-  <main class="w-full pt-[4rem] bg-surface relative min-h-screen" id="contenido-principal">
+  <main class="home-main w-full pt-[7.5rem] bg-surface relative min-h-screen" id="contenido-principal">
     <div class="flex flex-col w-full">
       <!-- SCHEMA.ORG LD+JSON ESTRUCTURADO -->
       <script type="application/ld+json">
@@ -817,9 +820,8 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-md">
             <!-- Iván Tapia -->
             <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-md">
-              <div
-                class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary font-headline-sm font-bold">
-                IT</div>
+              <img class="w-16 h-16 rounded-full object-cover shrink-0" src="assets/images/directorio/ivan.jpeg"
+                alt="Retrato de Iván Tapia Contardo" width="64" height="64" loading="lazy" />
               <div class="flex flex-col">
                 <h3 class="font-headline-sm text-headline-sm text-on-surface">Iván Tapia Contardo</h3>
                 <span class="font-label-sm text-label-sm text-primary font-bold">Presidente</span>
@@ -828,9 +830,8 @@
             </div>
             <!-- María Pía Zenteno -->
             <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-md">
-              <div
-                class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 text-secondary font-headline-sm font-bold">
-                MZ</div>
+              <img class="w-16 h-16 rounded-full object-cover shrink-0" src="assets/images/directorio/mariapia.jpeg"
+                alt="Retrato de María Pía Zenteno Fernández" width="64" height="64" loading="lazy" />
               <div class="flex flex-col">
                 <h3 class="font-headline-sm text-headline-sm text-on-surface">María Pía Zenteno Fernández</h3>
                 <span class="font-label-sm text-label-sm text-secondary font-bold">Vicepresidenta</span>
@@ -850,9 +851,8 @@
             </div>
             <!-- Luisa Reyes -->
             <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-md">
-              <div
-                class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary font-headline-sm font-bold">
-                LR</div>
+              <img class="w-16 h-16 rounded-full object-cover shrink-0" src="assets/images/directorio/luisa.jpeg"
+                alt="Retrato de Luisa Reyes Riquelme" width="64" height="64" loading="lazy" />
               <div class="flex flex-col">
                 <h3 class="font-headline-sm text-headline-sm text-on-surface">Luisa Reyes Riquelme</h3>
                 <span class="font-label-sm text-label-sm text-primary font-bold">Tesorera</span>
@@ -861,9 +861,8 @@
             </div>
             <!-- Cristian Cubillos -->
             <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-md">
-              <div
-                class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 text-secondary font-headline-sm font-bold">
-                CC</div>
+              <img class="w-16 h-16 rounded-full object-cover shrink-0" src="assets/images/directorio/cristian.jpeg"
+                alt="Retrato de Cristian Cubillos Ulloa" width="64" height="64" loading="lazy" />
               <div class="flex flex-col">
                 <h3 class="font-headline-sm text-headline-sm text-on-surface">Cristian Cubillos Ulloa</h3>
                 <span class="font-label-sm text-label-sm text-secondary font-bold">Director</span>

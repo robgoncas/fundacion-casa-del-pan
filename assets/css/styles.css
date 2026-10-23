@@ -15,6 +15,14 @@ body {
   scroll-margin-top: 4.5rem;
 }
 
+body.home-page {
+  scroll-padding-top: 8rem;
+}
+
+body.home-page [id] {
+  scroll-margin-top: 8rem;
+}
+
 body {
   overscroll-behavior: none;
 }
@@ -76,6 +84,9 @@ main > :last-child {
 
 @media (max-width: 620px) {
   .accessibility-panel { right: 1rem; bottom: 6rem; }
+  body.home-page .home-brand-row { height: 3rem; }
+  body.home-page .home-brand-logo { width: 2.25rem; height: 2.25rem; }
+  body.home-page .home-main { padding-top: 7rem; }
 }
 
 .site-header {
