@@ -115,12 +115,45 @@
     });
   }
 
-  function enviarFormulario(event) {
+  async function enviarFormulario(event) {
     event.preventDefault();
     const feedback = document.getElementById('form-feedback');
     const form = document.getElementById('form-contacto');
-    if (feedback) feedback.classList.remove('hidden');
-    if (form) form.reset();
+    const submitButton = form?.querySelector('button[type="submit"]');
+    const submitLabel = submitButton?.querySelector('span:last-child');
+    if (!(form instanceof HTMLFormElement) || !(feedback instanceof HTMLElement) || !submitButton || !submitLabel) {
+      console.error('No se pudo enviar el formulario: faltan elementos requeridos.');
+      return;
+    }
+
+    feedback.classList.add('hidden');
+    submitButton.disabled = true;
+    submitLabel.textContent = 'Enviando...';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+      const result = await response.json();
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || 'El servicio de correo no aceptó el mensaje.');
+      }
+
+      form.reset();
+      feedback.textContent = '¡Gracias! Tu mensaje fue enviado. Pronto nos pondremos en contacto contigo.';
+      feedback.classList.remove('hidden', 'text-error', 'bg-error-container');
+      feedback.classList.add('text-secondary', 'bg-secondary-container/40');
+    } catch (error) {
+      console.error('Error al enviar el formulario de contacto:', error);
+      feedback.textContent = 'No pudimos enviar tu mensaje. Inténtalo nuevamente o escríbenos a fun.casadelpan@gmail.com.';
+      feedback.classList.remove('hidden', 'text-secondary', 'bg-secondary-container/40');
+      feedback.classList.add('text-error', 'bg-error-container');
+    } finally {
+      submitButton.disabled = false;
+      submitLabel.textContent = 'Enviar Mensaje a la Fundación';
+    }
   }
 
   function setupMobileMenu() {

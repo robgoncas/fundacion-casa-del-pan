@@ -407,13 +407,20 @@
             </div>
           </div>
           <!-- Barra de Progreso Subasta -->
-          <div aria-label="Progreso de obras comprometidas" aria-valuemax="100" aria-valuemin="0" aria-valuenow="26"
+          <div aria-label="Progreso de obras comprometidas" aria-valuemax="48" aria-valuemin="0" aria-valuenow="20"
             class="w-full bg-surface-container-high rounded-full h-4 overflow-hidden" role="progressbar">
-            <div class="bg-secondary h-full rounded-full transition-all duration-500" style="width: 54.17%"></div>
+            <div class="bg-secondary h-full rounded-full transition-all duration-500" style="width: 41.67%"></div>
           </div>
-          <div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant -mt-space-sm">
-            <span>26 Obras Comprometidas</span>
-            <span class="font-bold text-on-surface">Meta: 48 Obras / Financiamiento año completo de arriendo</span>
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant -mt-space-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center gap-x-space-md gap-y-space-xs">
+              <span>20 Obras Comprometidas</span>
+              <span class="font-bold text-on-surface">Meta: 48 Obras / Financiamiento año completo de arriendo</span>
+            </div>
+            <a class="inline-flex min-h-[44px] items-center justify-center gap-space-xs rounded-lg bg-primary px-space-md py-space-xs font-label-md text-label-md font-bold text-on-primary shadow-sm transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              href="obras-subastas.html">
+              <span aria-hidden="true" class="material-symbols-outlined text-[20px]">palette</span>
+              <span>Ver obras</span>
+            </a>
           </div>
           <!-- Grid de Coordenadas del Evento -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
@@ -817,53 +824,42 @@
               N° 341834.
             </p>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-md">
+          <div class="grid grid-cols-2 gap-space-sm sm:gap-space-md">
             <!-- Iván Tapia -->
-            <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-md">
-              <img class="w-16 h-16 rounded-full object-cover shrink-0" src="assets/images/directorio/ivan.jpeg"
+            <div class="p-space-md sm:p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col sm:flex-row items-center gap-space-md">
+              <img class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover shrink-0" src="assets/images/directorio/ivan.jpeg"
                 alt="Retrato de Iván Tapia Contardo" width="64" height="64" loading="lazy" />
-              <div class="flex flex-col">
+              <div class="flex flex-col text-center sm:text-left">
                 <h3 class="font-headline-sm text-headline-sm text-on-surface">Iván Tapia Contardo</h3>
                 <span class="font-label-sm text-label-sm text-primary font-bold">Presidente</span>
                 <span class="font-body-sm text-body-sm text-on-surface-variant">Especialista en Educación de Ciegos (U.Ch.) &amp; Pastor</span>
               </div>
             </div>
             <!-- María Pía Zenteno -->
-            <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-md">
-              <img class="w-16 h-16 rounded-full object-cover shrink-0" src="assets/images/directorio/mariapia.jpeg"
+            <div class="p-space-md sm:p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col sm:flex-row items-center gap-space-md">
+              <img class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover shrink-0" src="assets/images/directorio/mariapia.jpeg"
                 alt="Retrato de María Pía Zenteno Fernández" width="64" height="64" loading="lazy" />
-              <div class="flex flex-col">
+              <div class="flex flex-col text-center sm:text-left">
                 <h3 class="font-headline-sm text-headline-sm text-on-surface">María Pía Zenteno Fernández</h3>
                 <span class="font-label-sm text-label-sm text-secondary font-bold">Vicepresidenta</span>
                 <span class="font-body-sm text-body-sm text-on-surface-variant">Educadora Diferencial DM / TAL (IHK / UPLACED)</span>
               </div>
             </div>
-            <!-- Eugenia Villavicencio -->
-            <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-md">
-              <div
-                class="w-16 h-16 rounded-full bg-tertiary/10 flex items-center justify-center shrink-0 text-tertiary font-headline-sm font-bold">
-                EV</div>
-              <div class="flex flex-col">
-                <h3 class="font-headline-sm text-headline-sm text-on-surface">Eugenia Villavicencio Ponce</h3>
-                <span class="font-label-sm text-label-sm text-tertiary font-bold">Secretaria</span>
-                <span class="font-body-sm text-body-sm text-on-surface-variant">Secretaria Ejecutiva</span>
-              </div>
-            </div>
             <!-- Luisa Reyes -->
-            <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-md">
-              <img class="w-16 h-16 rounded-full object-cover shrink-0" src="assets/images/directorio/luisa.jpeg"
+            <div class="p-space-md sm:p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col sm:flex-row items-center gap-space-md">
+              <img class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover shrink-0" src="assets/images/directorio/luisa.jpeg"
                 alt="Retrato de Luisa Reyes Riquelme" width="64" height="64" loading="lazy" />
-              <div class="flex flex-col">
+              <div class="flex flex-col text-center sm:text-left">
                 <h3 class="font-headline-sm text-headline-sm text-on-surface">Luisa Reyes Riquelme</h3>
                 <span class="font-label-sm text-label-sm text-primary font-bold">Tesorera</span>
                 <span class="font-body-sm text-body-sm text-on-surface-variant">Psicóloga Clínica</span>
               </div>
             </div>
             <!-- Cristian Cubillos -->
-            <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-md">
-              <img class="w-16 h-16 rounded-full object-cover shrink-0" src="assets/images/directorio/cristian.jpeg"
+            <div class="p-space-md sm:p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col sm:flex-row items-center gap-space-md">
+              <img class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover shrink-0" src="assets/images/directorio/cristian.jpeg"
                 alt="Retrato de Cristian Cubillos Ulloa" width="64" height="64" loading="lazy" />
-              <div class="flex flex-col">
+              <div class="flex flex-col text-center sm:text-left">
                 <h3 class="font-headline-sm text-headline-sm text-on-surface">Cristian Cubillos Ulloa</h3>
                 <span class="font-label-sm text-label-sm text-secondary font-bold">Director</span>
                 <span class="font-body-sm text-body-sm text-on-surface-variant">Dirección Institucional</span>
@@ -1187,7 +1183,15 @@
                 Formulario ágil sin barreras. Te responderemos en menos de 24 horas hábiles.
               </p>
             </div>
-            <form class="flex flex-col gap-space-md" id="form-contacto" onsubmit="enviarFormulario(event)">
+            <form class="flex flex-col gap-space-md" id="form-contacto"
+              action="https://formsubmit.co/ajax/fun.casadelpan@gmail.com" method="POST"
+              onsubmit="enviarFormulario(event)">
+              <input name="_subject" type="hidden" value="Nuevo mensaje desde el sitio web Casa del Pan" />
+              <input name="_template" type="hidden" value="table" />
+              <div aria-hidden="true" class="hidden">
+                <label for="contacto-verificacion">No completar este campo</label>
+                <input autocomplete="off" id="contacto-verificacion" name="_honey" tabindex="-1" type="text" />
+              </div>
               <div class="flex flex-col gap-space-xxs">
                 <label class="font-label-md text-label-md text-on-surface" for="contacto-nombre">Nombre y Apellido <span
                     aria-hidden="true" class="text-tertiary">*</span></label>
@@ -1232,9 +1236,8 @@
                 <span class="material-symbols-outlined text-[20px]">send</span>
                 <span>Enviar Mensaje a la Fundación</span>
               </button>
-              <p class="hidden text-center font-label-md text-label-md text-secondary font-bold p-space-xs rounded bg-secondary-container/40"
-                id="form-feedback" role="alert">
-                ¡Muchas gracias! Hemos recibido tu mensaje. Pronto te contactaremos desde Valparaíso.
+              <p class="hidden text-center font-label-md text-label-md font-bold p-space-xs rounded"
+                id="form-feedback" role="status" aria-live="polite">
               </p>
             </form>
           </div>
