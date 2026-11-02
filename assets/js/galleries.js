@@ -417,7 +417,8 @@ Firma: En la esquina inferior izquierda se observa la firma "CONTARDO", aportand
 
   function card(work, index) {
     const details = detailsFor(work.path);
-    const title = details?.title || titleFromPath(work.path);
+    const artworkTitle = details?.title || titleFromPath(work.path);
+    const title = galleryRoot.dataset.galleryRoot === 'auction' ? `${index + 1}.- ${artworkTitle}` : artworkTitle;
     const description = descriptionFor(work.path);
     const metadata = details ? detailsDescription(details) : '';
     const figure = document.createElement('figure');
@@ -449,7 +450,8 @@ Firma: En la esquina inferior izquierda se observa la firma "CONTARDO", aportand
   function updateLightbox() {
     const work = currentWorks[currentIndex];
     const details = detailsFor(work.path);
-    const title = details?.title || titleFromPath(work.path);
+    const artworkTitle = details?.title || titleFromPath(work.path);
+    const title = galleryRoot.dataset.galleryRoot === 'auction' ? `${currentIndex + 1}.- ${artworkTitle}` : artworkTitle;
     lightboxImage.src = work.path;
     lightboxImage.alt = title;
     lightboxTitle.textContent = title;
