@@ -301,7 +301,19 @@ Estética constructivista e industrial: Las líneas rectas, la forma trapezoidal
       author: 'Jessica Neira Otero',
       technique: 'Óleo sobre tela',
       size: '65 × 50 cm',
-      description: 'Obra de Jessica Neira Otero donada para la subasta solidaria.'
+      description: `Esta obra al óleo sobre tela de Jessica Neira captura de manera muy evocativa la esencia urbana y pintoresca de los cerros de Valparaíso, Chile.
+
+Algunos comentarios y detalles destacados sobre la composición y el estilo:
+
+Protagonismo y atmósfera: En primer plano, la figura de un perrito sentado pacientemente sobre una estructura aporta un toque tierno, melancólico y muy característico de las calles porteñas, donde los animales forman parte cotidiana del paisaje. Su mirada directa hacia el espectador genera una conexión emocional inmediata.
+
+Composición y perspectiva: La obra utiliza una perspectiva en descenso que guía la mirada a través de una escalera o pasaje estrecho bordeado por casas típicas con arquitectura tradicional de los cerros.
+
+Uso del color y entorno: Los tonos tierra, ocres y pasteles de las viviendas de la derecha contrastan sutilmente con los edificios más sobrios de la izquierda, mientras que al fondo se abre la clásica postal de la bahía de Valparaíso con el mar y algunos botes flotando en el horizonte.
+
+Textura y técnica: Se aprecian pinceladas texturizadas, especialmente en el pelaje del perro y en los volúmenes de las construcciones, lo que otorga corporeidad y dinamismo a la superficie de la tela.
+
+Es una hermosa representación costumbrista que rinde homenaje a la identidad visual, la arquitectura escalonada y la atmósfera bohemia de Valparaíso.`
     },
     obra16: {
       title: 'Lennon',
