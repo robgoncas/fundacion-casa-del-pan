@@ -74,7 +74,11 @@
     'assets/images/obras_subasta/obra17.jpeg',
     'assets/images/obras_subasta/obra18.jpeg',
     'assets/images/obras_subasta/obra19.jpeg',
-    'assets/images/obras_subasta/obra20.jpeg'
+    'assets/images/obras_subasta/obra20.jpeg',
+    'assets/images/obras_subasta/obra21.jpeg',
+    'assets/images/obras_subasta/obra22.jpeg',
+    'assets/images/obras_subasta/obra23.jpeg',
+    'assets/images/obras_subasta/obra24.jpeg'
   ];
 
   const collectionSeries = {
@@ -379,6 +383,44 @@ Composición y atmósfera: La obra presenta una división visual clara. La parte
 Técnica: Se aprecian pinceladas densas y empastes marcados que otorgan un fuerte relieve físico y dinamismo al lienzo.
 
 Firma: En la esquina inferior izquierda se observa la firma "CONTARDO", aportando identidad a esta pieza de carácter lírico y atmosférico.`
+    },
+    obra21: {
+      title: 'Sin Título 5',
+      author: 'Iván Tapia',
+      technique: 'Óleo sobre tela',
+      size: '45,5 × 47 cm',
+      year: '2000',
+      description: `Obra abstracta en óleo sobre tela que destaca por la energía gestual de sus trazos y la tensión cromática entre rojos, azules y tonos claros. La composición se construye con capas de color que generan una sensación de movimiento, profundidad y fuerza expresiva, manteniendo la obra en un equilibrio entre el caos pictórico y la intensidad emocional propia de la pintura contemporánea.`
+    },
+    obra22: {
+      title: 'Lunas',
+      author: 'Iván Tapia',
+      technique: 'Óleo sobre tela',
+      size: '70 × 50 cm',
+      year: '2004',
+      description: `La pintura titulada «Lunas», realizada en óleo sobre tela en el año 2004, presenta una fascinante composición de carácter abstracto y geométrico donde predominan las formas circulares, triangulares y rectangulares superpuestas. A través de una cuidada retícula visual, la obra entrelaza estas figuras creando una sensación de profundidad y dinamismo espacial, acentuada por transparencias y sutiles contrastes tonales que guían la mirada del espectador a través del lienzo.
+
+En cuanto a la paleta cromática, la obra se desarrolla principalmente en armonías de tonos verdes, celestes y tierras, evocando una atmósfera serena pero vibrante que dialoga directamente con el título de la pieza. La interacción de la luz con estos matices geométricos, junto con la textura característica del óleo sobre la tela, aporta un carácter orgánico a la estructura matemática de las formas, consolidando una propuesta artística equilibrada y evocadora.`
+    },
+    obra23: {
+      title: 'Desechos contaminantes',
+      author: 'Iván Tapia',
+      technique: 'Óleo sobre madera',
+      size: '45 × 60 cm',
+      year: '1989',
+      description: `La obra Desechos contaminantes (1989), realizada por el artista Iván Tapia en óleo sobre madera, presenta una poderosa y cruda representación visual de la degradación ambiental y industrial de la época. A través de una composición dinámica y opresiva, el cuadro expone tuberías y estructuras mecánicas de las que fluyen flujos densos y oscuros, simbolizando de manera directa el impacto destructivo de la actividad humana y fabril sobre el entorno natural. La pincelada enérgica y los trazos marcados acentúan una atmósfera de urgencia, reflejando las tensiones ecológicas y sociales latentes a finales de la década de los ochenta.
+
+Desde una perspectiva formal y cromática, la pintura destaca por el uso de tonos cálidos y agresivos —como rojos intensos, naranjas ardientes y marrones— que contrastan fuertemente con los negros profundos de los vertidos tóxicos y los acentos verdosos. Este manejo de la luz y el color sobre la textura de la madera genera una sensación de calor industrial y asfixia, donde el paisaje natural parece completamente subsumido por la maquinaria y el residuo. Así, Tapia logra consolidar una crítica contundente que trasciende lo meramente estético para convertirse en un testimonio visual de advertencia sobre los peligros del desarrollo industrial descontrolado.`
+    },
+    obra24: {
+      title: 'Descontinuado',
+      author: 'Juan González (Juanch)',
+      technique: 'Escultura en metal reciclado',
+      size: '47 × 28 × 28 cm',
+      year: '2026',
+      description: `La escultura "Descontinuado" (2026), de Juan González (Juanch), es una pieza en metal reciclado de 47x28x28 cm que transforma magistralmente elementos industriales en desuso —como el estator de un motor eléctrico y varillas de construcción— en la figura estilizada de un ave. El uso de bobinas de cobre aporta texturas y colores cálidos, mientras que el diseño de las patas y el cuello curvo dota a la materia inerte de una sorprendente vitalidad orgánica y ligereza.
+
+El título de la obra funciona como una profunda crítica irónica que alude tanto a la obsolescencia de las piezas tecnológicas como a la vulnerabilidad de la naturaleza frente al consumo moderno. Así, Juan González demuestra que los residuos industriales no representan el fin del camino, sino una nueva oportunidad estética que invita a reflexionar sobre nuestro tiempo a través del ensamblaje contemporáneo.`
     }
   };
   const detailsFor = (path) => {
