@@ -78,7 +78,16 @@
     'assets/images/obras_subasta/obra21.jpeg',
     'assets/images/obras_subasta/obra22.jpeg',
     'assets/images/obras_subasta/obra23.jpeg',
-    'assets/images/obras_subasta/obra24.jpeg'
+    'assets/images/obras_subasta/obra24.jpeg',
+    'assets/images/obras_subasta/obra25.jpeg',
+    'assets/images/obras_subasta/obra26.jpeg',
+    'assets/images/obras_subasta/obra27.jpeg',
+    'assets/images/obras_subasta/obra28.jpeg',
+    'assets/images/obras_subasta/obra29.jpeg',
+    'assets/images/obras_subasta/obra30.jpeg',
+    'assets/images/obras_subasta/obra31.jpeg',
+    'assets/images/obras_subasta/obra32.jpeg',
+    'assets/images/obras_subasta/obra33.jpeg'
   ];
 
   const collectionSeries = {
@@ -375,7 +384,6 @@ En cuanto al uso del color y los elementos visuales, conviven tonalidades frías
       technique: 'Acrílico sobre tela',
       size: '100 × 84 cm',
       year: '2000',
-      size: 'Aún no informado',
       description: `Esta pintura abstracta destaca por el uso expresivo de la textura y una paleta de colores profundamente evocadora.
 
 Composición y atmósfera: La obra presenta una división visual clara. La parte inferior está dominada por tonos oscuros, azules profundos y verdes sombríos que sugieren una base terrenal o nocturna, mientras que la franja superior se ilumina con trazos dinámicos en blancos, verdes claros y destellos amarillos, evocando un cielo tormentoso, el rompimiento de la luz o la energía de la naturaleza.
@@ -421,6 +429,150 @@ Desde una perspectiva formal y cromática, la pintura destaca por el uso de tono
       description: `La escultura "Descontinuado" (2026), de Juan González (Juanch), es una pieza en metal reciclado de 47x28x28 cm que transforma magistralmente elementos industriales en desuso —como el estator de un motor eléctrico y varillas de construcción— en la figura estilizada de un ave. El uso de bobinas de cobre aporta texturas y colores cálidos, mientras que el diseño de las patas y el cuello curvo dota a la materia inerte de una sorprendente vitalidad orgánica y ligereza.
 
 El título de la obra funciona como una profunda crítica irónica que alude tanto a la obsolescencia de las piezas tecnológicas como a la vulnerabilidad de la naturaleza frente al consumo moderno. Así, Juan González demuestra que los residuos industriales no representan el fin del camino, sino una nueva oportunidad estética que invita a reflexionar sobre nuestro tiempo a través del ensamblaje contemporáneo.`
+    },
+    obra25: {
+      title: 'Sin título',
+      series: 'Valparaíso Cerro Abajo',
+      author: 'David Heredia',
+      technique: 'Técnica mixta',
+      size: '17,5 × 23 cm',
+      description: `Esta pieza de pequeño formato (17,5 × 23 cm) de David Heredia, como su homónima, captura la esencia arquitectónica y atmosférica de los cerros porteños desde un lenguaje expresionista y gestual. Lejos del paisajismo descriptivo o postal, el artista descompone la topografía urbana en una trama vibrante de líneas, planos superpuestos y manchas atmosféricas.
+
+Lenguaje plástico y técnica mixta
+
+Tensión gráfica y pictórica: El uso de técnica mixta permite un diálogo constante entre el trazo nervioso y estructural —que evoca tanto los entramados de cables eléctricos como las vigas, barandas y escaleras de los cerros— y las aguadas translúcidas que aportan profundidad y atmósfera.
+
+Paleta cromática: Predomina una gama fría y melancólica articulada en torno a azules lavados, violáceos y tierras oscuros, equilibrada por blancos luminosos que abren respiros visuales en los extremos superior e inferior de ambas composiciones.
+
+Diálogo y diferencias entre ambas obras
+
+La obra I presenta una estructura más abierta, lineal y aérea. Los trazos oscuros cruzan el soporte como un andamiaje o tendido eléctrico contra un fondo más despejado de cielos malvas y celestes. Se percibe mayor ligereza y una lectura más clara de los vacíos arquitectónicos y las escaleras inferiores.
+
+Valor como díptico o serie
+
+Aunque funciona de manera autónoma, junto a la II establece un ritmo visual muy atractivo: la primera actúa como un apunte más gráfico y respirado, mientras que la segunda profundiza en la densidad y el abigarramiento característico de la ladera porteña. Su formato íntimo invita a una observación cercana para apreciar la superposición de capas y la gestualidad del trazo.`
+    },
+    obra26: {
+      title: 'Valparaíso Cerro Abajo II',
+      series: 'Valparaíso Cerro Abajo',
+      author: 'David Heredia',
+      technique: 'Técnica mixta',
+      size: '17,5 × 23 cm',
+      description: `Obra II (segunda imagen): La composición se vuelve más densa, matérica y compacta. La acumulación de techumbres y fachadas en el centro genera una masa visual casi abstracta, donde aparecen acentos cálidos —terracotas y un rojo intenso en la parte superior— que rompen la frialdad del conjunto y aportan mayor peso dramático.`
+    },
+    obra27: {
+      title: 'Bruma',
+      author: 'Antonio Sánchez',
+      technique: 'Técnica mixta',
+      size: '34 × 34 cm',
+      year: '2014',
+      description: `La obra titulada «Bruma», creada por Antonio Sánchez en 2014, es una pieza de técnica mixta de 34 × 34 cm que destaca por su atmósfera envolvente y su potente carga expresiva.
+
+Análisis visual y técnico
+
+Composición y atmósfera: El título de la obra, «Bruma», se materializa visualmente a través de texturas densas y una paleta de colores sobria dominada por grises, blancos y sutiles acentos azulados. Estos tonos evocan la humedad, el frío y la neblina característica de los paisajes urbanos costeros o portuarios.
+
+Técnica y textura: El uso de la técnica mixta permite apreciar empastes marcados y capas superpuestas que aportan relieve y profundidad a la superficie. Las formas sugieren estructuras arquitectónicas o tejados difuminados por la niebla, donde los límites entre el cielo y los edificios se desvanecen.
+
+Firma y registro: En la parte inferior del margen blanco de la obra se aprecian las anotaciones del autor, incluyendo la firma de Antonio Sánchez, la fecha de realización (2014) y la catalogación de la pieza, enmarcada con un passe-partout oscuro y una moldura de madera clara que realza su formato cuadrado.
+
+En conjunto, es una pieza introspectiva que logra capturar el dinamismo y la melancolía de un paisaje velado por la atmósfera.`
+    },
+    obra28: {
+      title: 'Block #4',
+      series: 'El Condominio',
+      author: 'César',
+      technique: 'Grabado',
+      year: '2021',
+      description: `Esta obra es un grabado titulado «Block #4», perteneciente a la serie «El Condominio», creado por el artista Cesar en 2021.
+
+La composición presenta una estructura arquitectónica vertical y compartimentada —que simula un bloque o edificio de viviendas— integrada dentro de un espacio de tonos neutros y texturas sutiles típicas del grabado en papel, donde se aprecia la delicada huella de la plancha enmarcando la escena.`
+    },
+    obra29: {
+      title: 'Exquisitos platos que el olvido llena con sus copas de ira',
+      series: 'Marejada (dibujo 153)',
+      author: 'Adamus',
+      technique: 'Dibujo a tinta sobre papel hilado',
+      size: '37 × 27 cm',
+      year: '1995',
+      description: `La obra titulada «Exquisitos platos que el olvido llena con sus copas de ira», perteneciente a la serie Marejada (dibujo 153) de Adamus (1995), es un ejercicio de cartografía interior y simbolismo abstracto, ejecutado con tinta sobre papel hilado (37 × 27 cm).
+
+La tensión entre contención y desborde: El elemento central, que evoca la forma ambigua de un recipiente, una placa o un plato desgarrado, funciona como núcleo estructurador. En su interior se aglutinan texturas densas, pliegues y acumulaciones celulares realizadas mediante tramas, líneas y punteados. Este núcleo parece contener una energía que amenaza con desbordarse hacia los márgenes de la hoja.
+
+Dinamismo y fuerzas de la naturaleza: Fiel al espíritu de la serie, el espacio circundante está surcado por corrientes dinámicas, ondas concéntricas y ramificaciones filamentosas que recuerdan tanto a estructuras neuronales como a corrientes marinas o descargas atmosféricas. Las formas flotantes y las líneas de trazo libre transmiten una sensación de movimiento caótico pero rítmico, como si el soporte capturara el instante posterior a un impacto o una marejada emocional.
+
+El peso de la poética y la memoria: El título aporta una capa de lectura existencial. Los platos y las copas de ira, metáforas de nutrición anímica, memoria y residuo emocional, se contraponen a la acción corrosiva o contenedora del olvido. Las formas orgánicas que se desprenden o se anclan al fondo parecen fragmentos de recuerdos transformados por el tiempo y el dolor.
+
+Maestría técnica del claroscuro en tinta: La obra destaca por el dominio del trazo a pluma y tinta. La ausencia de color prioriza el contraste entre el blanco del soporte y la densidad de los negros, logrando texturas táctiles donde la línea varía desde la rigidez geométrica hasta la total organicidad. Cada zona de sombreado construye volumen y profundidad mediante la acumulación de trazos finos.
+
+En suma, se trata de una pieza introspectiva donde Adamus subvierte la representación figurativa para volcar sobre el papel una topografía de los afectos, la memoria y las mareas internas del pensamiento.`
+    },
+    obra30: {
+      title: 'La última ronda de los olvidados',
+      author: 'Matías',
+      technique: 'Grabado',
+      description: `Esta obra de Matías, exponente del grabado de la Escuela de Bellas Artes de Valparaíso, despliega una atmósfera densa, de carácter onírico y existencialista. La composición se estructura mediante una retícula geométrica o enrejado que aprisiona la escena, aportando una sensación claustrofóbica y de aislamiento.
+
+En primer plano, una figura antropomórfica con cabeza de cerdo, apoyada pensativa sobre una mesa rústica donde reposan un cenicero y un vaso, evoca introspección, hastío o melancolía urbana. Al fondo, la presencia de esqueletos interactuando y danzando en una suerte de aquelarre íntimo refuerza el simbolismo de la vanitas barroca, recordando la fugacidad de la vida y la omnipresencia de la muerte.
+
+El manejo de las texturas oscuras y el claroscuro propio del grabado potencia el dramatismo, conectando con la veta poética, bohemia y a veces sombría arraigada en el imaginario porteño. Es una pieza que interpela al espectador sobre la soledad, el paso del tiempo y los excesos de la condición humana.`
+    },
+    obra31: {
+      title: 'Intervalo',
+      author: 'César González',
+      technique: 'Grabado en metal',
+      size: '10,5 × 52,5 cm',
+      description: `Esta obra de César González, formado en la histórica Escuela Municipal de Bellas Artes de Valparaíso, propone un diálogo silencioso y profundo entre la materia intervenida, el paso del tiempo y la contención del vacío.
+
+El formato sumamente apaisado (10,5 × 52,5 cm) orienta la mirada de forma horizontal, evocando la línea del horizonte porteño o una estructura arquitectónica suspendida. En el centro, la plancha de metal oxidado funciona como un territorio de memoria: sobre el tono terroso y rugoso de la corrosión emerge una huella lineal de pátina verdosa que recuerda tanto a un antiguo muelle o viaducto como a una inscripción erosionada por el salitre.
+
+Fiel a su investigación plástica sobre «lo que falta» y el «espacio libre», el artista no satura la superficie, sino que enmarca la matriz metálica dentro de un amplio campo claro y desgastado de bordes ennegrecidos. Ese margen blanco y respirable actúa como un contrapeso visual y conceptual: el vacío deja de ser una simple ausencia para convertirse en el sostén que otorga tensión, silencio y protagonismo a la huella mínima del grabado. Es una pieza de gran economía de medios y alta carga poética, donde el desgaste propio del metal y la amplitud del espacio circundante invitan al espectador a completar mentalmente aquello que el tiempo o la sustracción han dejado abierto.`
+    },
+    obra32: {
+      title: 'Cenicienta',
+      author: 'María Pía Zenteno',
+      technique: 'Papel elaborado con pulpas de desechos de verduras, decorado con flores secas y materias vegetales',
+      size: '46 × 33,5 cm',
+      year: '2024',
+      description: `La obra «Cenicienta» destaca por su fuerte impronta matérica. El soporte principal es un papel vegetal de bordes irregulares y rústicos, cuya superficie posee una textura rugosa, porosa y terrosa. Esto aporta una gran riqueza táctil y visual, alejándose por completo de la bidimensionalidad lisa e industrial.
+
+Color y tono: Predomina una gama monocromática y terrosa, compuesta por tonos ocres, marrones, sepias y beiges. Esta paleta orgánica deriva directamente de la naturaleza de los materiales empleados, transmitiendo una sensación de calidez, rusticidad y atemporalidad.
+
+Luz y volumen: La iluminación incide de manera rasante sobre los relieves creados por las fibras vegetales y los elementos incrustados. Las hojas secas y los tallos generan sombras sutiles que aportan profundidad y un relieve escultórico al plano pictórico.
+
+Narrativa y forma: Tal como señala la autora, la composición integra elementos figurativos de carácter sugerente. Se distinguen siluetas vegetales que evocan la forma de un zapato —en alusión al icónico zapato de cristal del cuento de Cenicienta—, así como la estilización de una figura femenina acompañada de un lazo estructurado con fibras vegetales.
+
+Sostenibilidad y transmutación: El uso de pulpas de desechos de verduras y restos orgánicos refleja una profunda reflexión en torno al reciclaje, la economía circular y el valor estético de lo efímero o descartado. Elementos cotidianos y orgánicos que usualmente se desechan son rescatados y transmutados en un soporte artístico perdurable.
+
+En conclusión, «Cenicienta» de María Pía Zenteno es una obra que dialoga estrechamente entre el arte contemporáneo, la artesanía del papel y la naturaleza. La elección de materiales no es meramente técnica, sino que carga a la pieza de un fuerte contenido poético y conceptual, donde lo orgánico se convierte en vehículo de la memoria, el relato fantástico y la sustentabilidad.`
+    },
+    obra33: {
+      title: 'Renacer',
+      author: 'María Pía Zenteno',
+      technique: 'Papel reciclado elaborado con pulpas de verduras y decorado con flores secas',
+      size: '46 × 37 cm',
+      year: '2024',
+      description: `La obra «Renacer» de María Pía Zenteno (2024), con unas dimensiones de 46 × 37 cm, se presenta como una profunda reflexión material y conceptual sobre los ciclos de la naturaleza, la transformación y la memoria vegetal.
+
+El material como portador de sentido
+
+Papel artesanal y orgánico: El uso de papel reciclado elaborado a partir de pulpas de verduras dota a la obra de una textura rugosa, orgánica e imperfecta. Esto aleja a la pieza de la rigidez industrial y la conecta directamente con la tierra.
+
+Inclusión botánica: Las hojas y flores secas integradas en la estructura del papel no son un mero adorno superficial; forman parte entrañable del soporte, fusionándose con él como fósiles contemporáneos.
+
+Dimensión conceptual: La poética del ciclo vital
+
+El concepto de «Renacer»: Como señala la propia creadora, la obra toma elementos considerados «muertos» —hojas secas caídas de los árboles— y los reubica en el ámbito del arte para otorgarles una nueva vida.
+
+Transitoriedad y permanencia: La obra captura un momento efímero de la naturaleza (la caída del follaje otoñal) y lo fija en el tiempo a través de un proceso de creación manual y consciente. Las hojas, que biológicamente cumplieron su ciclo, se transforman en trazos y texturas dentro de una composición artística, logrando la inmortalidad simbólica.
+
+Aspectos formales y visuales
+
+Dualidad y díptico: Visualmente, la pieza muestra dos paneles o fragmentos texturizados dispuestos en paralelo sobre un fondo claro, lo que evoca una lectura en secuencia o un diálogo simétrico entre dos expresiones de una misma esencia natural.
+
+Paleta terrosa: Los tonos ocres, marrones y tostados refuerzan la calidez de la pieza y transmiten una sensación de sobriedad, autenticidad y arraigo con el entorno natural.
+
+En conclusión, «Renacer» es una pieza de arte ecológico y matérico que trasciende la manualidad para convertirse en una metáfora visual sobre la resiliencia, la reutilización creativa y la continuidad de la vida en formas inesperadas.`
     }
   };
   const detailsFor = (path) => {
